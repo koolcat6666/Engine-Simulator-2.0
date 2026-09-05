@@ -1,0 +1,43 @@
+# Arduino
+*.elf
+*.bin
+*.hex
+*.map
+*.eep
+build/
+output/
+
+# KiCad
+*.kicad_sch.lck
+*.kicad_pro.lck
+*.kicad_prl
+fp-info-cache
+*.bak
+*~
+\#*\#
+*.dsn
+*.ses
+*.kicad_pcb-bak
+*.sch-bak
+*.kicad_sch-bak
+.history/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Binary tools (scaricati separatamente)
+arduino-cli.exe
+arduino-cli.yaml
+
+# Temporary
+*.log
+*.tmp
