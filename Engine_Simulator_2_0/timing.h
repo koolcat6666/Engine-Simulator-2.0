@@ -32,7 +32,12 @@
 // Scritto dalla ISR del timer Crank (vedi onCrankTimer nel .ino).
 extern volatile uint32_t lastCrankEdgeUs;
 
+// Inizio del pattern (edge_counter==0): riferimento angolare del ciclo.
+// Scritto dalla ISR del timer Crank (vedi onCrankTimer nel .ino).
+extern volatile uint32_t revStartUs;
+
 void timingSetup();
 void timingUpdate();      // calcola valori finali dai timestamp grezzi (chiamare nel loop)
+void timingTest(bool on); // autotest: genera PWM noti su GPIO32/33 (jumper verso INJ1/IGN1)
 
 #endif

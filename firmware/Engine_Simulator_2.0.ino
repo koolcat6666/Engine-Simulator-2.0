@@ -145,6 +145,10 @@ void IRAM_ATTR onCrankTimer() {
   if (currentStatus.rpm >= 10 && engineState != ENGINE_OFF) {
     // Registra l'istante del fronte Crank per il calcolo dell'anticipo candela
     lastCrankEdgeUs = micros();
+    // Inizio del pattern (primo edge del giro): riferimento angolare del ciclo
+    if (edge_counter == 0) {
+      revStartUs = lastCrankEdgeUs;
+    }
 
     // Ottiene lo stato dell'edge corrente (combinazione di bit per Crank, Cam1, Cam2)
     uint8_t edgeState = pgm_read_byte(&Wheels[config.wheel].edge_states_ptr[edge_counter]);

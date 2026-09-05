@@ -235,6 +235,7 @@ button:hover{filter:brightness(1.15);box-shadow:0 0 18px rgba(0,212,255,.35)}
           <tr><td class="ch">IGN4</td><td class="val-ig">--</td><td class="val-ig">--</td><td><span class="led off"></span>--</td></tr>
         </tbody>
       </table>
+      <button id="btn-sigtest" onclick="toggleSigTest()">Avvia test segnali (jumper 32->INJ1, 33->IGN1)</button>
     </div>
   </div>
 
@@ -321,6 +322,14 @@ async function toggleEngine(){
     else if(d.state==='CRANKING') b.classList.add('crank');
     else if(d.state==='STOPPING') b.classList.add('stop');
   }catch(e){}
+}
+let sigTestOn = false;
+async function toggleSigTest(){
+  sigTestOn = !sigTestOn;
+  const b = document.getElementById('btn-sigtest');
+  b.textContent = sigTestOn ? 'Ferma test segnali' : 'Avvia test segnali (jumper 32->INJ1, 33->IGN1)';
+  b.classList.toggle('stop', sigTestOn);
+  await fetch('/api/test?'+(sigTestOn?'on=1':'on=0'));
 }
 setInterval(poll, 200);
 poll();
@@ -447,6 +456,13 @@ void webSetup() {
     AsyncWebServerResponse *resp = request->beginResponse_P(200, "text/html", INDEX_HTML);
     resp->addHeader("Cache-Control", "no-store");
     request->send(resp);
+  });
+
+  // --- AUTOTEST TIMING ---
+  server.on("/api/test", HTTP_GET, [](AsyncWebServerRequest *request) {
+    bool on = request->hasParam("on");
+    timingTest(on);
+    request->send(200, "application/json", on ? "{\"ok\":true,\"test\":1}" : "{\"ok\":true,\"test\":0}");
   });
 
   // --- SETUP ruota fonica ---

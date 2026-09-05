@@ -48,6 +48,9 @@ static ignRaw ignRawData[4];
 // Fronte di riferimento Crank (scritto dalla ISR del timer nel .ino)
 volatile uint32_t lastCrankEdgeUs = 0;
 
+// Inizio del pattern (edge_counter==0): riferimento angolare del ciclo
+volatile uint32_t revStartUs = 0;
+
 // --- ISR INIETTORI (attivo basso: DISCESA = apertura, SALITA = chiusura) ---
 #define MAKE_INJ_ISR(i)                                                                \
 void IRAM_ATTR injISR##i() {                                                           \
@@ -120,6 +123,21 @@ void timingSetup() {
   }
 }
 
+// --- AUTOTEST: generatore PWM su GPIO32/33 per verificare la catena di acquisizione.
+//   GPIO32 -> INJ1 (50 Hz, on-time 4.0 ms -> duty 20%)
+//   GPIO33 -> IGN1 (100 Hz, dwell 2.0 ms)
+//   I segnali Speeduino sono attivi-bassi: il calcolo quindi usa il tempo LOW.
+//   ledcWrite = parte HIGH; usiamo 80% HIGH -> 20% LOW.
+void timingTest(bool on) {
+  if (on) {
+    ledcAttach(32, 50, 12);   ledcWrite(32, 3276);  // INJ1: periodo 20ms, LOW 4ms
+    ledcAttach(33, 100, 12);  ledcWrite(33, 3276);  // IGN1: periodo 10ms, LOW 2ms
+  } else {
+    ledcDetach(32);
+    ledcDetach(33);
+  }
+}
+
 // --- CALCOLO VALORI FINALI (loop, a bassa priorita') ---
 void timingUpdate() {
   // Soglia minima RPM per avere senso fisico nel calcolo dell'anticipo
@@ -128,6 +146,8 @@ void timingUpdate() {
 
   // Riferimento Crank aggiornato dall'ISR del timer
   uint32_t crankUs = lastCrankEdgeUs;
+  // Inizio del pattern: riferimento angolare del ciclo (per l'anticipo)
+  uint32_t revStart = revStartUs;
 
   // @Injectors
   for (uint8_t i = 0; i < 4; i++) {
@@ -158,14 +178,18 @@ void timingUpdate() {
       ignitions[i].active = false;
     }
 
-    // Anticipo: angolo tra lo spark e l'ultimo fronte Crank, normalizzato al giro.
-    if (engineRunning && crankUs != 0 && ignitions[i].active) {
-      uint32_t deltaUs = r->sparkStartUs - crankUs;   // gestisce wrap a 32 bit
-      // Periodo di un giro completo in us (360° o 720° a seconda della ruota)
+    // Anticipo: angolo dello spark rispetto all'inizio del pattern (revStartUs),
+    // normalizzato al ciclo. Con wrap a 32 bit la differenza è sempre positiva:
+    // se lo spark arriva PRIMA dell'inizio del ciclo (ciclo successivo) aggiungiamo
+    // un periodo per mantenere l'angolo nel range [0, wheel_degrees).
+    if (engineRunning && revStart != 0 && ignitions[i].active) {
       float degreesPerRev = (float)Wheels[config.wheel].wheel_degrees;
       float periodRevUs = (degreesPerRev / 360.0f) * 60000000.0f / rpm;
-      // Normalizza delta nel range [0, periodo_giro)
-      float delta = (float)(deltaUs % (uint32_t)periodRevUs);
+      // Differenza firmata (wrap-aware): negativa se lo spark precede l'inizio del ciclo
+      int32_t diff = (int32_t)(r->sparkStartUs - revStart);
+      float delta = (float)diff;
+      if (delta < 0.0f) delta += periodRevUs;
+      if (delta >= periodRevUs) delta -= periodRevUs;
       ignitions[i].advanceDeg = (int16_t)((delta / periodRevUs) * degreesPerRev);
     } else {
       ignitions[i].advanceDeg = 0;
