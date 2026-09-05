@@ -21,6 +21,8 @@
 #include "soc/gpio_reg.h"
 #include "globals.h"
 #include "comms.h"
+#include "timing.h"
+#include "web.h"
 
 // --- CONFIGURAZIONE PIN ESP32 ---
 #define PIN_START_STOP  4   // Pulsante accensione motore (con pull-up)
@@ -110,12 +112,7 @@ wheels Wheels[MAX_WHEELS] = {
 };
 
 // --- VARIABILI DI STATO MOTORE ---
-enum MotorState {
-  ENGINE_OFF,
-  ENGINE_CRANKING,
-  ENGINE_RUNNING,
-  ENGINE_STOPPING
-};
+// enum MotorState definito in globals.h
 MotorState engineState = ENGINE_OFF;
 
 float currentRpmFloat = 0.0;
@@ -124,7 +121,13 @@ float tpsValue = 0.0; // Apertura TPS normalizzata 0.0 - 1.0
 // Variabili per CLT e MAP
 float engineTemp = 20.0; // CLT di partenza (Temp ambiente)
 float targetTemp = 90.0; // Temperatura a regime
+float currentMapKpa = 100.0; // Pressione collettore (kPa)
 bool fanActive = false;
+
+// --- TIMING INIETTORI / CANDELE + UTILITA' CONNESSA (definizioni globali) ---
+injectorTiming injectors[4];
+ignitionTiming ignitions[4];
+uint8_t connectedClients = 0;
 
 // --- TIMER HARDWARE PER GENERAZIONE RUOTA FONICA (ESP32 v3.x API) ---
 hw_timer_t * crankTimer = NULL;
@@ -140,6 +143,9 @@ void IRAM_ATTR onCrankTimer() {
   portENTER_CRITICAL_ISR(&timerMux);
   
   if (currentStatus.rpm >= 10 && engineState != ENGINE_OFF) {
+    // Registra l'istante del fronte Crank per il calcolo dell'anticipo candela
+    lastCrankEdgeUs = micros();
+
     // Ottiene lo stato dell'edge corrente (combinazione di bit per Crank, Cam1, Cam2)
     uint8_t edgeState = pgm_read_byte(&Wheels[config.wheel].edge_states_ptr[edge_counter]);
     edgeState ^= output_invert_mask;
@@ -218,6 +224,9 @@ void setup() {
   // Configurazione I/O
   pinMode(PIN_START_STOP, INPUT_PULLUP);
   pinMode(PIN_FAN_IN, INPUT_PULLUP);
+  // ADC pieno fondo scala: GPIO34 (TPS) legge il potenziometro 0-3.3V.
+  // Senza atten specifico il core v3.3.x usa ~1.1V -> TPS sempre vicino a 0.
+  analogSetPinAttenuation(PIN_TPS_IN, ADC_11db);
   
   pinMode(PIN_CRANK_OUT, OUTPUT);
   pinMode(PIN_CAM1_OUT, OUTPUT);
@@ -234,6 +243,12 @@ void setup() {
   timerAlarm(crankTimer, 10000, true, 0); // Periodo iniziale 10ms, auto-reload, infiniti cicli
 
   setRPM(0);
+
+  // Configurazione monitoraggio timing iniettori/candele (FASE 2)
+  timingSetup();
+
+  // Configurazione WiFi AP + dashboard web (FASE 3)
+  webSetup();
 }
 
 // Loop Principale
@@ -245,6 +260,9 @@ void loop() {
   if (Serial.available() > 0) {
     commandParser();
   }
+
+  // Aggiorna contatore client WiFi connessi (asincrono, non blocca)
+  webLoop();
   
   // Esecuzione logica di simulazione ogni 10ms
   if (now - lastTick >= 10) {
@@ -313,26 +331,26 @@ void loop() {
     setRPM(currentStatus.base_rpm);
 
     // 4. Simulazione MAP (Pressione collettore)
-    float mapKpa = 100.0; // Pressione atmosferica di default (motore spento)
+    currentMapKpa = 100.0; // Pressione atmosferica di default (motore spento)
     if (engineState == ENGINE_RUNNING) {
       float idleMap = 30.0;
       float decelMap = 15.0;
       
       if (currentRpmFloat > 1000.0 && tpsValue < 0.05) {
         // Cut-off o decelerazione a farfalla chiusa
-        mapKpa = decelMap;
+        currentMapKpa = decelMap;
       } else {
         // Interpolazione tra vuoto al minimo e carico massimo
-        mapKpa = idleMap + (tpsValue * 70.0);
+        currentMapKpa = idleMap + (tpsValue * 70.0);
       }
     } else if (engineState == ENGINE_CRANKING) {
-      mapKpa = 85.0; // Lieve depressione durante il cranking
+      currentMapKpa = 85.0; // Lieve depressione durante il cranking
     } else {
-      mapKpa = 100.0; // Motore spento -> Atmosferica
+      currentMapKpa = 100.0; // Motore spento -> Atmosferica
     }
     
     // Converte MAP (kPa 0-100) in tensione analogica (DAC 8 bit: 0-255 -> 0-3.3V)
-    uint8_t dacMapVal = (uint8_t)(mapKpa * 2.55);
+    uint8_t dacMapVal = (uint8_t)(currentMapKpa * 2.55);
     dacWrite(PIN_MAP_DAC, dacMapVal);
 
     // 5. Simulazione CLT (Temperatura Motore)
@@ -358,5 +376,8 @@ void loop() {
     
     uint8_t dacCltVal = (uint8_t)((1.0 - tempPercent) * 255.0);
     dacWrite(PIN_CLT_DAC, dacCltVal);
+
+    // Calcolo timing iniettori/candele dai timestamp grezzi (FASE 2)
+    timingUpdate();
   }
 }

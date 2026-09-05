@@ -51,6 +51,8 @@ Il sistema si collega alla centralina tramite il connettore IDC 40-pin standard 
 - **Simulazione MAP dinamica**: 100 kPa a motore spento, 85 kPa in cranking, 30-100 kPa in funzione di RPM/TPS
 - **Simulazione CLT dinamica**: riscaldamento graduale, raffreddamento con ventola, legge di Newton a motore spento
 - **Interfaccia seriale USB**: protocollo ArduStim per configurazione ruota fonica e modalita' RPM da TunerStudio
+- **Monitoraggio timing Speeduino (FASE 2)**: input capture via ISR sui 9 ingressi CD4050BE (4 iniettori + 4 candele + fan) — misura on-time iniettori (ms), frequenza, duty, dwell candele e anticipo in gradi BTDC
+- **WiFi AP + Dashboard web (FASE 3)**: SSID `EngineSimulator2.0` / pass `1234567890` / IP `192.168.254.1`, dashboard fluida su `/`, selezione ruota fonica da ~75 pattern e salvataggio su NVS su `/setup`, endpoint `/api/data` JSON
 
 ---
 
@@ -63,6 +65,10 @@ Engine Simulator 2.0/
 │   ├── comms.cpp                # Parser comandi seriale (protocollo ArduStim)
 │   ├── comms.h                  # Header comms
 │   ├── globals.h                # Strutture dati condivise
+│   ├── timing.cpp               # Input capture timing iniettori/candele (FASE 2)
+│   ├── timing.h                 # Header timing
+│   ├── web.cpp                  # WiFi AP + dashboard + /setup + /api/data (FASE 3)
+│   ├── web.h                    # Header web
 │   └── wheel_defs.h             # 63 pattern ruote foniche
 ├── Engine_Simulator_2_0/        # Copia Arduino IDE (cartella = nome .ino)
 ├── Hardware/                    # Design PCB (KiCad 10.0)
@@ -107,6 +113,40 @@ Engine Simulator 2.0/
 
 ---
 
+## Lavorare su due PC (sync sessioni chat opencode)
+
+Per continuare la stessa conversazione opencode su due PC (uno alla volta), le sessioni si esportano come JSON nel repo e si reimportano sull'altro PC.
+
+### Prerequisito (una tantum, su entrambi i PC)
+
+```powershell
+winget install SST.opencode
+```
+
+### Trasferimento dal PC-A (quello su cui hai lavorato)
+
+```powershell
+.\export-chat.ps1               # scegli la sessione, verra' salvata in sessions/
+git add sessions
+git commit -m "chat: export sessione"
+git push
+```
+
+### Ripresa sul PC-B
+
+```powershell
+git pull
+.\import-chat.ps1 sessions\<file>.json
+```
+
+Poi apri opencode e riprendi la sessione con `/sessions` (o `opencode --continue`).
+
+> Le sessioni esportate restano nel repo come JSON in `sessions/`. Non sincronizzare
+> il database `~/.local/share/opencode/opencode.db` tra PC: e' un file binario che
+> si corrompe facilmente se sincronizzato a mano.
+
+---
+
 ## Build e Upload
 
 ### Prerequisiti
@@ -114,11 +154,16 @@ Engine Simulator 2.0/
 - [Arduino IDE](https://www.arduino.cc/en/software) o [Arduino CLI](https://arduino.github.io/arduino-cli/)
 - Pacchetto board **esp32** installato (`esp32:esp32` via Board Manager)
 - Scheda selezionata: `ESP32 Dev Module` o `ESP32-WROOM-32U`
+- Librerie per la dashboard (FASE 3) — usare i fork **ESP32Async** (compatibili col
+  core esp32 v3.3.x e mbedTLS 3; le versioni classiche `me-no-dev` non compilano):
+  - **ESP Async WebServer** (`arduino-cli lib install "ESP Async WebServer"`)
+  - **Async TCP** (`arduino-cli lib install "Async TCP"`)
 
 ### Compilazione e caricamento
 
 ```bash
-# Via Arduino CLI
+# Via Arduino CLI (prima volta: installa anche le librerie della dashboard)
+arduino-cli lib install "ESP Async WebServer" "Async TCP"
 arduino-cli compile --fqbn esp32:esp32:esp32 firmware/Engine_Simulator_2.0.ino
 arduino-cli upload --fqbn esp32:esp32:esp32 --port COMx firmware/Engine_Simulator_2.0.ino
 ```
@@ -126,8 +171,10 @@ arduino-cli upload --fqbn esp32:esp32:esp32 --port COMx firmware/Engine_Simulato
 ### Configurazione
 
 La ruota fonica puo' essere selezionata tramite:
-1. **Seriale USB** (115200 baud): comando `X` per ruota successiva, `S<n>` per selezionare per indice
-2. **ArduStim GUI**: software desktop che si collega alla seriale per configurare pattern e modalita'
+1. **Dashboard web** (consigliata): connettiti alla rete WiFi `EngineSimulator2.0` (password `1234567890`)
+   e apri `http://192.168.254.1` -> pagina `/setup` per scegliere la ruota (salvataggio persistente su NVS)
+2. **Seriale USB** (115200 baud): comando `X` per ruota successiva, `S<n>` per selezionare per indice
+3. **ArduStim GUI**: software desktop che si collega alla seriale per configurare pattern e modalita'
 
 ---
 

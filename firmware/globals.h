@@ -34,4 +34,42 @@ struct status {
 extern struct configTable config;
 extern struct status currentStatus;
 
+// --- STATO MOTORE DI SIMULAZIONE (condiviso con web server / /api/data) ---
+enum MotorState {
+  ENGINE_OFF,
+  ENGINE_CRANKING,
+  ENGINE_RUNNING,
+  ENGINE_STOPPING
+};
+
+extern MotorState engineState;
+extern float currentRpmFloat;
+extern float tpsValue;          // apertura TPS normalizzata 0.0 - 1.0
+extern float engineTemp;        // CLT in °C
+extern float targetTemp;        // temperatura a regime in °C
+extern float currentMapKpa;     // pressione collettore in kPa
+extern bool fanActive;          // stato ventola letta dalla ECU
+
+// --- TIMING INIETTORI / CANDELE (FASE 2 - monitoraggio PWM via CD4050BE) ---
+// Valori misurati dalle ISR in timing.cpp; un canale e' "active" solo quando il
+// segnale della Speeduino supera almeno un ciclo completo misurato.
+struct injectorTiming {
+  bool active;                  // canale con segnale rilevato?
+  float onTimeMs;               // tempo apertura iniettore (ms)
+  float frequencyHz;            // frequenza iniezione (Hz)
+  uint16_t dutyPct;             // duty cycle in % (0-100)
+};
+
+struct ignitionTiming {
+  bool active;                  // canale con segnale rilevato?
+  float dwellMs;                // durata impulso candela (ms)
+  int16_t advanceDeg;           // anticipo candela in gradi BTDC
+};
+
+extern injectorTiming injectors[4];
+extern ignitionTiming ignitions[4];
+
+// --- UTILITA' CONNESSA AL SISTEMA ---
+extern uint8_t connectedClients; // numero di client wifi collegati alla dashboard
+
 #endif
