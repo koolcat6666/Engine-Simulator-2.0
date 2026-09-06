@@ -180,10 +180,6 @@ La ruota fonica puo' essere selezionata tramite:
 
 ## Note di Progetto
 
-- Il **MAP sensor** integrato sulla Speeduino V0.4 (IDC Pin 11) puo' essere usato come alternativa al DAC generato dall'ESP32. In questo caso, il pin MAP dell'IDC non va collegato al PCB del simulatore.
+- Il **MAP sensor** integrato sulla Speeduino V0.4 (IDC Pin 11) non puo' essere usato come alternativa al DAC generato dall'ESP32 per le prove di simulazione. In questo caso, il pin MAP dell'IDC va collegato al PCB del simulatore.
 - La **ventola** e' gestita in retroazione: Speeduino la controlla, l'ESP32 la legge per modellare la temperatura CLT.
 - I **potenziometri IAT e O2** sono puramente manuali e non influenzano la simulazione dell'ESP32. Servono per testare le correzioni della ECU.
-
-### Corrisotti noti nel firmware (2026-09)
-
-- **Uscite Crank/Cam non funzionanti:** sulla ISR del timer `onCrankTimer()` l'uso di `digitalWrite()` non aggiornava i pin GPIO su ESP32 Arduino Core v3.3.5 (Crank/Cam rimanevano a 0V anche a motore avviato, quindi Speeduino non leggeva i giri). **Fix:** sostituito `digitalWrite` con la scrittura diretta ai registri GPIO (`GPIO.out_w1ts` / `GPIO.out_w1tc`), che funziona in ISR. Dopo la patch Speeduino (Mega2560) legge correttamente i giri.
