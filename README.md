@@ -1,6 +1,6 @@
 # Engine Simulator 2.0
 
-Simulatore di motore per il test di ECU (**Speeduino V0.4**) basato su **ESP32-WROOM-32U**.  
+Simulatore di motore per il test di ECU (**Speeduino V0.4**) basato su **ESP32-32U devKitC**.  
 Il sistema si collega alla centralina tramite il connettore IDC 40-pin standard di Speeduino e genera i segnali necessari per simulare il funzionamento di un motore reale.
 
 ## Architettura
