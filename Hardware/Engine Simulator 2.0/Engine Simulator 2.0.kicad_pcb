@@ -2920,7 +2920,7 @@
 		(descr "Potentiometer, vertical, ACP CA9-V10, http://www.acptechnologies.com/wp-content/uploads/2017/05/02-ACP-CA9-CE9.pdf")
 		(tags "Potentiometer vertical ACP CA9-V10")
 		(property "Reference" "RV5"
-			(at 5 -8.65 0)
+			(at 5 -5.495 0)
 			(layer "F.SilkS")
 			(uuid "3f04a9bb-45be-45b3-aaaf-84f0fc19a595")
 			(effects
@@ -2931,7 +2931,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 5 3.65 0)
+			(at 5 0.505 0)
 			(layer "F.Fab")
 			(uuid "1102dc94-51c1-41d5-b4fb-a3f34012010d")
 			(effects
@@ -11956,7 +11956,7 @@
 		(descr "Potentiometer, vertical, ACP CA9-V10, http://www.acptechnologies.com/wp-content/uploads/2017/05/02-ACP-CA9-CE9.pdf")
 		(tags "Potentiometer vertical ACP CA9-V10")
 		(property "Reference" "RV3"
-			(at 5 -8.65 0)
+			(at 5 0.5 0)
 			(layer "F.SilkS")
 			(uuid "69fbb523-aecf-4674-a059-3a25f3e932ad")
 			(effects
@@ -11967,7 +11967,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 5 3.65 0)
+			(at 5.5 -5 0)
 			(layer "F.Fab")
 			(uuid "ffbbb33e-2a2b-4312-96fa-8410140082ee")
 			(effects
@@ -12164,17 +12164,6 @@
 			(fill no)
 			(layer "F.Fab")
 			(uuid "732884da-2096-40fa-b148-d5af7e01c3f2")
-		)
-		(fp_text user "${REFERENCE}"
-			(at 1 -2.5 90)
-			(layer "F.Fab")
-			(uuid "f3c57b48-45eb-4304-a1a0-b130b6112828")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
 		)
 		(pad "1" thru_hole circle
 			(at 0 0 180)
@@ -14494,7 +14483,7 @@
 		(descr "Potentiometer, vertical, ACP CA9-V10, http://www.acptechnologies.com/wp-content/uploads/2017/05/02-ACP-CA9-CE9.pdf")
 		(tags "Potentiometer vertical ACP CA9-V10")
 		(property "Reference" "RV4"
-			(at 5 -8.65 0)
+			(at 5 -6 0)
 			(layer "F.SilkS")
 			(uuid "bee7a0fc-a760-4dad-b037-7aad7d615424")
 			(effects
@@ -14505,7 +14494,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 5 3.65 0)
+			(at 6 0 0)
 			(layer "F.Fab")
 			(uuid "32c949bc-5edf-4a23-8d6a-ef842353d7a7")
 			(effects
@@ -17201,7 +17190,7 @@
 			)
 		)
 		(property "Value" "20k"
-			(at 3.81 2.37 90)
+			(at 3.81 -2 90)
 			(layer "F.Fab")
 			(uuid "187a924a-1197-4d39-867b-fd9aeb99a80a")
 			(effects
@@ -22142,6 +22131,42 @@
 		(at 57.5 62.5 0)
 		(layer "F.SilkS")
 		(uuid "d2cd736b-9a10-43f9-9ede-115a99091e80")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "O2 Sensor\n"
+		(at 59 148 0)
+		(layer "F.SilkS")
+		(uuid "af635031-d024-4f64-9fb1-8d6785ea7b14")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "TPS"
+		(at 60 125.5 0)
+		(layer "F.SilkS")
+		(uuid "0ec16c02-6294-49c0-9121-380ccf08a46f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "IAT\n"
+		(at 75.5 136.5 0)
+		(layer "F.SilkS")
+		(uuid "9b0f1936-3720-42bf-8753-cbea09f17ade")
 		(effects
 			(font
 				(size 1 1)
