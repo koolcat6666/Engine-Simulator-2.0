@@ -1,0 +1,60 @@
+Rapporto statistico C.S.
+========================
+- Data: 18/09/2026 20:50:38
+- Progetto: board_routed
+- Nome scheda: board_routed
+
+Scheda
+-----
+- Larghezza: 100,0000 mm
+- Altezza: 100,0000 mm
+- Area: 10000,00 mm²
+- Area rame fronte: 1290,254 mm²
+- Area rame retro: 1135,761 mm²
+- Clearance minima pista: 0,2016 mm
+- Larghezza minima pista: 0,2000 mm
+- Diametro min foro: 0,3000 mm
+- Spessore stackup scheda: 1,6000 mm
+
+- Area impronta fronte: 5642,313 mm²
+- Area impronta retro: 1127,173 mm²
+- Densità componenti fronte: 56,42 %
+- Densità componenti retro: 11,27 %
+Piazzole
+----
+- Fori passanti: 246
+- SMD: 0
+- Connettore: 0
+- NPTH: 0
+- Dentellati: 0
+- Press-fit: 0
+
+Via
+----
+- Via passanti: 11
+- Via ciechi: 0
+- Via sepolti: 0
+- Microvia: 0
+
+Componenti
+----------
+
+|              | Lato fronte | Lato retro | Totale |
+|--------------|-------------|------------|--------|
+|THT:          |          58 |          0 |     58 |
+|SMD:          |           0 |          0 |      0 |
+|Imprecisato:  |           4 |          0 |      4 |
+|Totale:       |          62 |          0 |     62 |
+
+Forature
+-----------
+
+| Conteggio | Forma |    Dim. X |    Dim. Y | Placcata | Via/Piaz | Strato iniziale | Strato finale |
+|-----------|-------|-----------|-----------|----------|----------|-----------------|---------------|
+|       150 | Tondo | 0,8000 mm | 0,8000 mm |      PTH | Piazzola |            F.Cu |          B.Cu |
+|        48 | Tondo | 1,0000 mm | 1,0000 mm |      PTH | Piazzola |            F.Cu |          B.Cu |
+|        33 | Tondo | 1,3000 mm | 1,3000 mm |      PTH | Piazzola |            F.Cu |          B.Cu |
+|        11 | Tondo | 0,3000 mm | 0,3000 mm |      PTH |      Via |            F.Cu |          B.Cu |
+|         6 | Tondo | 0,9000 mm | 0,9000 mm |      PTH | Piazzola |            F.Cu |          B.Cu |
+|         5 | Tondo | 1,1000 mm | 1,1000 mm |      PTH | Piazzola |            F.Cu |          B.Cu |
+|         4 | Tondo | 2,2000 mm | 2,2000 mm |      PTH | Piazzola |            F.Cu |          B.Cu |

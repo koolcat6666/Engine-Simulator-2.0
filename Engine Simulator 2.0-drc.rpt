@@ -1,0 +1,797 @@
+** Drc report for Engine Simulator 2.0.kicad_pcb **
+** Created on 2026-09-18T20:18:03 **
+** Report includes: Errors, Warnings, Exclusions **
+
+** Found 59 DRC violations **
+[lib_footprint_issues]: La libreria impronte 'PCM_Capacitor_THT_AKL' non è abilitata nella configurazione corrente
+    Local override; warning
+    @(123.0000 mm, 146.0449 mm): Footprint C5
+[lib_footprint_issues]: La libreria impronte 'PCM_Diode_THT_AKL' non è abilitata nella configurazione corrente
+    Local override; warning
+    @(128.0000 mm, 88.3100 mm): Footprint DZ9
+[lib_footprint_issues]: La libreria impronte 'PCM_Diode_THT_AKL' non è abilitata nella configurazione corrente
+    Local override; warning
+    @(119.2941 mm, 88.3100 mm): Footprint DZ8
+[lib_footprint_issues]: La libreria impronte 'PCM_Diode_THT_AKL' non è abilitata nella configurazione corrente
+    Local override; warning
+    @(75.7647 mm, 88.3100 mm): Footprint DZ3
+[lib_footprint_issues]: La libreria impronte 'PCM_Diode_THT_AKL' non è abilitata nella configurazione corrente
+    Local override; warning
+    @(58.3529 mm, 88.3100 mm): Footprint DZ1
+[lib_footprint_issues]: La libreria impronte 'PCM_Diode_THT_AKL' non è abilitata nella configurazione corrente
+    Local override; warning
+    @(84.4706 mm, 88.3100 mm): Footprint DZ4
+[lib_footprint_issues]: La libreria impronte 'PCM_Diode_THT_AKL' non è abilitata nella configurazione corrente
+    Local override; warning
+    @(93.1765 mm, 88.3100 mm): Footprint DZ5
+[lib_footprint_issues]: La libreria impronte 'PCM_Diode_THT_AKL' non è abilitata nella configurazione corrente
+    Local override; warning
+    @(110.5882 mm, 88.3100 mm): Footprint DZ7
+[lib_footprint_issues]: La libreria impronte 'PCM_Espressif' non è abilitata nella configurazione corrente
+    Local override; warning
+    @(84.5000 mm, 100.3600 mm): Footprint U1
+[lib_footprint_issues]: La libreria impronte 'PCM_Diode_THT_AKL' non è abilitata nella configurazione corrente
+    Local override; warning
+    @(101.8824 mm, 88.3100 mm): Footprint DZ6
+[lib_footprint_issues]: La libreria impronte 'PCM_Diode_THT_AKL' non è abilitata nella configurazione corrente
+    Local override; warning
+    @(67.0588 mm, 88.3100 mm): Footprint DZ2
+[lib_footprint_issues]: La libreria impronte 'PCM_Capacitor_THT_AKL' non è abilitata nella configurazione corrente
+    Local override; warning
+    @(115.5000 mm, 146.0000 mm): Footprint C7
+[lib_footprint_issues]: La libreria impronte 'PCM_Capacitor_THT_AKL' non è abilitata nella configurazione corrente
+    Local override; warning
+    @(141.0449 mm, 146.5000 mm): Footprint C4
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(85.7700 mm, 105.4400 mm): Footprint text of U1 (VP/GPIO36)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(85.7700 mm, 107.9800 mm): Footprint text of U1 (VN/GPIO39)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(85.7700 mm, 110.5200 mm): Footprint text of U1 (GPIO34)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(85.7700 mm, 113.0600 mm): Footprint text of U1 (GPIO35)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(85.7700 mm, 115.6000 mm): Footprint text of U1 (GPIO32)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(85.7700 mm, 118.1400 mm): Footprint text of U1 (GPIO33)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(85.7700 mm, 120.6800 mm): Footprint text of U1 (GPIO25)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(85.7700 mm, 123.2200 mm): Footprint text of U1 (GPIO26)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(85.7700 mm, 125.7600 mm): Footprint text of U1 (GPIO27)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(85.7700 mm, 128.3000 mm): Footprint text of U1 (GPIO14/MTMS)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(85.7700 mm, 130.8400 mm): Footprint text of U1 (GPIO12/MTDI)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(85.7700 mm, 135.9200 mm): Footprint text of U1 (GPIO13/MTCK)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(85.7700 mm, 138.4600 mm): Footprint text of U1 (D2)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(85.7700 mm, 141.0000 mm): Footprint text of U1 (D3)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(85.7700 mm, 143.5400 mm): Footprint text of U1 (CMD)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(108.6300 mm, 102.9000 mm): Footprint text of U1 (GPIO23)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(108.6300 mm, 105.4400 mm): Footprint text of U1 (GPIO22)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(108.6300 mm, 107.9800 mm): Footprint text of U1 (GPIO1/U0TXD)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(108.6300 mm, 110.5200 mm): Footprint text of U1 (GPIO3/U0RXD)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(108.6300 mm, 113.0600 mm): Footprint text of U1 (GPIO21)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(108.6300 mm, 118.1400 mm): Footprint text of U1 (GPIO19)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(108.6300 mm, 120.6800 mm): Footprint text of U1 (GPIO18)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(108.6300 mm, 123.2200 mm): Footprint text of U1 (GPIO5)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(108.6300 mm, 125.7600 mm): Footprint text of U1 (GPIO17)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(108.6300 mm, 128.3000 mm): Footprint text of U1 (GPIO16)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(108.6300 mm, 130.8400 mm): Footprint text of U1 (GPIO4)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(108.6300 mm, 133.3800 mm): Footprint text of U1 (GPIO0)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(108.6300 mm, 135.9200 mm): Footprint text of U1 (GPIO2)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(108.6300 mm, 138.4600 mm): Footprint text of U1 (GPIO15/MTDO)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(108.6300 mm, 141.0000 mm): Footprint text of U1 (D1)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(108.6300 mm, 143.5400 mm): Footprint text of U1 (D0)
+[text_height]: Altezza testo fuori campo (vincoli impostazioni scheda altezza testo serigrafia alt. min 0,8000 mm; effettivo 0,7000 mm)
+    Rule: vincoli impostazioni scheda altezza testo serigrafia; warning
+    @(108.6300 mm, 146.0800 mm): Footprint text of U1 (CLK)
+[silk_overlap]: Silkscreen clearance
+    Rule: vincoli impostazioni scheda serigrafia; warning
+    @(104.0000 mm, 62.0000 mm): PCB text 'FAN IDLE' on F.Silkscreen
+    @(105.0000 mm, 60.4875 mm): Polygon of J7 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: vincoli impostazioni scheda serigrafia; warning
+    @(115.0000 mm, 62.0000 mm): PCB text 'VVT  BOOST' on F.Silkscreen
+    @(116.5000 mm, 60.4875 mm): Polygon of J8 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: vincoli impostazioni scheda serigrafia; warning
+    @(127.0000 mm, 62.0000 mm): PCB text 'MAP  CLT' on F.Silkscreen
+    @(128.0000 mm, 60.4875 mm): Polygon of J12 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: vincoli impostazioni scheda serigrafia; warning
+    @(61.5000 mm, 137.1500 mm): Reference field of RV3
+    @(57.3900 mm, 136.4900 mm): Segment of RV4 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: vincoli impostazioni scheda serigrafia; warning
+    @(82.0000 mm, 60.4875 mm): Polygon of J5 on F.Silkscreen
+    @(79.0000 mm, 51.0000 mm): Rectangle on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: vincoli impostazioni scheda serigrafia; warning
+    @(93.0000 mm, 60.4875 mm): Polygon of J6 on F.Silkscreen
+    @(79.0000 mm, 51.0000 mm): Rectangle on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: vincoli impostazioni scheda serigrafia; warning
+    @(56.0000 mm, 51.0000 mm): Rectangle on F.Silkscreen
+    @(70.5000 mm, 60.4875 mm): Polygon of J4 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: vincoli impostazioni scheda serigrafia; warning
+    @(59.5000 mm, 60.4875 mm): Polygon of J3 on F.Silkscreen
+    @(56.0000 mm, 51.0000 mm): Rectangle on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: vincoli impostazioni scheda serigrafia; warning
+    @(137.6500 mm, 147.8800 mm): Segment of U3 on F.Silkscreen
+    @(130.5000 mm, 148.0000 mm): Reference field of U3
+[silk_overlap]: Silkscreen clearance
+    Rule: vincoli impostazioni scheda serigrafia; warning
+    @(130.6900 mm, 149.2600 mm): Segment of U3 on F.Silkscreen
+    @(130.5000 mm, 148.0000 mm): Reference field of U3
+[silk_overlap]: Silkscreen clearance
+    Rule: vincoli impostazioni scheda serigrafia; warning
+    @(131.7500 mm, 137.0000 mm): Reference field of C1
+    @(131.1200 mm, 131.6300 mm): Segment of C2 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: vincoli impostazioni scheda serigrafia; warning
+    @(118.4200 mm, 130.5300 mm): Reference field of D13
+    @(118.1300 mm, 131.1200 mm): Segment of C3 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: vincoli impostazioni scheda serigrafia; warning
+    @(117.8700 mm, 124.8100 mm): Reference field of R13
+    @(118.1300 mm, 131.1200 mm): Segment of C3 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: vincoli impostazioni scheda serigrafia; warning
+    @(118.2500 mm, 114.8000 mm): Rectangle of U4 on F.Silkscreen
+    @(117.8700 mm, 124.8100 mm): Reference field of R13
+
+** Found 147 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(56.5000 mm, 131.0000 mm): PTH pad 2 [+5V] of RV3
+    @(66.5000 mm, 133.5000 mm): PTH pad 3 [+5V] of RV3
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(67.5000 mm, 141.5000 mm): PTH pad 2 [+5V] of RV4
+    @(66.5000 mm, 133.5000 mm): PTH pad 3 [+5V] of RV3
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(67.5000 mm, 141.5000 mm): PTH pad 2 [+5V] of RV4
+    @(57.5000 mm, 144.0000 mm): PTH pad 1 [+5V] of RV4
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.5000 mm, 144.4950 mm): PTH pad 1 [+5V] of RV5
+    @(67.5000 mm, 141.5000 mm): PTH pad 2 [+5V] of RV4
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(80.5000 mm, 141.9950 mm): PTH pad 2 [+5V] of RV5
+    @(70.5000 mm, 144.4950 mm): PTH pad 1 [+5V] of RV5
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(123.0000 mm, 146.0449 mm): PTH pad 1 [+5V] of C5
+    @(130.0000 mm, 146.0000 mm): PTH pad 3 [+5V] of U3
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(123.0000 mm, 146.0449 mm): PTH pad 1 [+5V] of C5
+    @(80.5000 mm, 141.9950 mm): PTH pad 2 [+5V] of RV5
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(123.5000 mm, 133.0000 mm): PTH pad 2 [+5V] of D13
+    @(128.5000 mm, 139.5000 mm): PTH pad 1 [+5V] of C2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(126.0000 mm, 128.5000 mm): PTH pad 1 [+5V] of C3
+    @(123.5000 mm, 133.0000 mm): PTH pad 2 [+5V] of D13
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(126.0000 mm, 128.5000 mm): PTH pad 1 [+5V] of C3
+    @(127.3100 mm, 116.1900 mm): PTH pad 8 [+5V] of U4
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(128.5000 mm, 139.5000 mm): PTH pad 1 [+5V] of C2
+    @(130.0000 mm, 146.0000 mm): PTH pad 3 [+5V] of U3
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(140.1200 mm, 92.9600 mm): PTH pad 14 [+5V] of U2
+    @(127.3100 mm, 116.1900 mm): PTH pad 8 [+5V] of U4
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(53.0000 mm, 53.0000 mm): PTH pad 1 [GND] of REF**
+    @(58.3529 mm, 80.6900 mm): PTH pad 2 [GND] of DZ1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(58.3529 mm, 80.6900 mm): PTH pad 2 [GND] of DZ1
+    @(67.0588 mm, 80.6900 mm): PTH pad 2 [GND] of DZ2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(62.0000 mm, 99.7600 mm): PTH pad 8 [GND] of U5
+    @(58.3529 mm, 80.6900 mm): PTH pad 2 [GND] of DZ1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(75.7647 mm, 80.6900 mm): PTH pad 2 [GND] of DZ3
+    @(67.0588 mm, 80.6900 mm): PTH pad 2 [GND] of DZ2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(76.1200 mm, 100.1100 mm): PTH pad 8 [GND] of U6
+    @(62.0000 mm, 99.7600 mm): PTH pad 8 [GND] of U5
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(84.0600 mm, 68.4600 mm): PTH pad 23 [GND] of J1
+    @(84.4706 mm, 80.6900 mm): PTH pad 2 [GND] of DZ4
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(84.4706 mm, 80.6900 mm): PTH pad 2 [GND] of DZ4
+    @(75.7647 mm, 80.6900 mm): PTH pad 2 [GND] of DZ3
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(84.5000 mm, 133.3800 mm): PTH pad 14 [GND] of U1
+    @(77.5000 mm, 131.3100 mm): PTH pad 2 [GND] of R22
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(84.5000 mm, 133.3800 mm): PTH pad 14 [GND] of U1
+    @(109.9000 mm, 115.6000 mm): PTH pad 32 [GND] of U1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(93.1765 mm, 80.6900 mm): PTH pad 2 [GND] of DZ5
+    @(101.8824 mm, 80.6900 mm): PTH pad 2 [GND] of DZ6
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(93.1765 mm, 80.6900 mm): PTH pad 2 [GND] of DZ5
+    @(84.4706 mm, 80.6900 mm): PTH pad 2 [GND] of DZ4
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.8400 mm, 68.4600 mm): PTH pad 9 [GND] of J1
+    @(101.8400 mm, 71.0000 mm): PTH pad 10 [GND] of J1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.8400 mm, 71.0000 mm): PTH pad 10 [GND] of J1
+    @(99.3000 mm, 71.0000 mm): PTH pad 12 [GND] of J1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.8824 mm, 80.6900 mm): PTH pad 2 [GND] of DZ6
+    @(101.8400 mm, 71.0000 mm): PTH pad 10 [GND] of J1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(109.9000 mm, 100.3600 mm): PTH pad 38 [GND] of U1
+    @(115.5000 mm, 110.1900 mm): PTH pad 2 [GND] of R16
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(109.9000 mm, 115.6000 mm): PTH pad 32 [GND] of U1
+    @(115.5000 mm, 110.1900 mm): PTH pad 2 [GND] of R16
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(110.5882 mm, 80.6900 mm): PTH pad 2 [GND] of DZ7
+    @(101.8824 mm, 80.6900 mm): PTH pad 2 [GND] of DZ6
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(110.5882 mm, 80.6900 mm): PTH pad 2 [GND] of DZ7
+    @(119.2941 mm, 80.6900 mm): PTH pad 2 [GND] of DZ8
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(115.5000 mm, 128.6200 mm): PTH pad 2 [GND] of R13
+    @(121.0000 mm, 128.5000 mm): PTH pad 2 [GND] of C3
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(115.5000 mm, 148.0000 mm): PTH pad 2 [GND] of C7
+    @(123.0000 mm, 148.0449 mm): PTH pad 2 [GND] of C5
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(120.5000 mm, 106.5000 mm): PTH pad 1 [GND] of RV2
+    @(123.0000 mm, 104.0000 mm): PTH pad 2 [GND] of RV2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(120.5000 mm, 106.5000 mm): PTH pad 1 [GND] of RV2
+    @(115.5000 mm, 110.1900 mm): PTH pad 2 [GND] of R16
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(121.0000 mm, 128.5000 mm): PTH pad 2 [GND] of C3
+    @(119.6900 mm, 123.8100 mm): PTH pad 4 [GND] of U4
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(121.0000 mm, 128.5000 mm): PTH pad 2 [GND] of C3
+    @(128.5000 mm, 134.5000 mm): PTH pad 2 [GND] of C2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(123.0000 mm, 148.0449 mm): PTH pad 2 [GND] of C5
+    @(121.0000 mm, 139.5000 mm): PTH pad 2 [GND] of C6
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(128.0000 mm, 80.6900 mm): PTH pad 2 [GND] of DZ9
+    @(119.2941 mm, 80.6900 mm): PTH pad 2 [GND] of DZ8
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(128.0000 mm, 80.6900 mm): PTH pad 2 [GND] of DZ9
+    @(132.5000 mm, 92.9600 mm): PTH pad 1 [GND] of U2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(128.5000 mm, 134.5000 mm): PTH pad 2 [GND] of C2
+    @(135.5000 mm, 134.5000 mm): PTH pad 2 [GND] of C1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(128.5000 mm, 134.5000 mm): PTH pad 2 [GND] of C2
+    @(121.0000 mm, 139.5000 mm): PTH pad 2 [GND] of C6
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.5000 mm, 92.9600 mm): PTH pad 1 [GND] of U2
+    @(145.3675 mm, 86.5000 mm): PTH pad 1 [GND] of J10
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.5000 mm, 100.5800 mm): PTH pad 4 [GND] of U2
+    @(132.5000 mm, 92.9600 mm): PTH pad 1 [GND] of U2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.5000 mm, 100.5800 mm): PTH pad 4 [GND] of U2
+    @(140.1200 mm, 103.1200 mm): PTH pad 10 [GND] of U2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.5000 mm, 100.5800 mm): PTH pad 4 [GND] of U2
+    @(123.0000 mm, 104.0000 mm): PTH pad 2 [GND] of RV2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.5000 mm, 108.2000 mm): PTH pad 7 [GND] of U2
+    @(132.5000 mm, 100.5800 mm): PTH pad 4 [GND] of U2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.5400 mm, 146.0000 mm): PTH pad 2 [GND] of U3
+    @(123.0000 mm, 148.0449 mm): PTH pad 2 [GND] of C5
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.5400 mm, 146.0000 mm): PTH pad 2 [GND] of U3
+    @(143.0449 mm, 146.5000 mm): PTH pad 2 [GND] of C4
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(135.5000 mm, 134.5000 mm): PTH pad 2 [GND] of C1
+    @(140.0000 mm, 128.5000 mm): PTH pad 2 [GND] of R14
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(136.0000 mm, 116.6500 mm): PTH pad 2 [GND] of RV1
+    @(138.5000 mm, 114.1500 mm): PTH pad 1 [GND] of RV1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(138.5000 mm, 114.1500 mm): PTH pad 1 [GND] of RV1
+    @(145.5000 mm, 118.5000 mm): PTH pad 2 [GND] of SW2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(138.5000 mm, 114.1500 mm): PTH pad 1 [GND] of RV1
+    @(132.5000 mm, 108.2000 mm): PTH pad 7 [GND] of U2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(139.8100 mm, 124.5000 mm): PTH pad 2 [GND] of R18
+    @(140.0000 mm, 128.5000 mm): PTH pad 2 [GND] of R14
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(139.8100 mm, 124.5000 mm): PTH pad 2 [GND] of R18
+    @(145.5000 mm, 118.5000 mm): PTH pad 2 [GND] of SW2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(145.3675 mm, 70.0000 mm): PTH pad 2 [GND] of J9
+    @(145.3675 mm, 63.5000 mm): PTH pad 1 [GND] of J11
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(145.3675 mm, 70.0000 mm): PTH pad 2 [GND] of J9
+    @(145.3675 mm, 86.5000 mm): PTH pad 1 [GND] of J10
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(145.3675 mm, 134.5000 mm): PTH pad 2 [GND] of J2
+    @(140.0000 mm, 128.5000 mm): PTH pad 2 [GND] of R14
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(148.0000 mm, 53.0000 mm): PTH pad 1 [GND] of REF**
+    @(145.3675 mm, 63.5000 mm): PTH pad 1 [GND] of J11
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(148.0000 mm, 148.0000 mm): PTH pad 1 [GND] of REF**
+    @(143.0449 mm, 146.5000 mm): PTH pad 2 [GND] of C4
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(123.6471 mm, 88.3100 mm): PTH pad 2 [Net-(DZ9-K)] of R31
+    @(62.0000 mm, 102.3000 mm): PTH pad 7 [Net-(DZ9-K)] of U5
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(128.0000 mm, 88.3100 mm): PTH pad 1 [Net-(DZ9-K)] of DZ9
+    @(123.6471 mm, 88.3100 mm): PTH pad 2 [Net-(DZ9-K)] of R31
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(114.9412 mm, 88.3100 mm): PTH pad 2 [Net-(DZ8-K)] of R30
+    @(68.5000 mm, 105.1900 mm): PTH pad 11 [Net-(DZ8-K)] of U6
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(119.2941 mm, 88.3100 mm): PTH pad 1 [Net-(DZ8-K)] of DZ8
+    @(114.9412 mm, 88.3100 mm): PTH pad 2 [Net-(DZ8-K)] of R30
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(84.5000 mm, 146.0800 mm): PTH pad 19 [Net-(D13-K)] of U1
+    @(115.5000 mm, 146.0000 mm): PTH pad 1 [Net-(D13-K)] of C7
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(115.5000 mm, 146.0000 mm): PTH pad 1 [Net-(D13-K)] of C7
+    @(116.0000 mm, 139.5000 mm): PTH pad 1 [Net-(D13-K)] of C6
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(116.0000 mm, 139.5000 mm): PTH pad 1 [Net-(D13-K)] of C6
+    @(113.3400 mm, 133.0000 mm): PTH pad 1 [Net-(D13-K)] of D13
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(59.5000 mm, 56.3675 mm): PTH pad 1 [/IGN1] of J3
+    @(54.0000 mm, 80.6900 mm): PTH pad 1 [/IGN1] of R23
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(104.3800 mm, 68.4600 mm): PTH pad 7 [/IGN1] of J1
+    @(59.5000 mm, 56.3675 mm): PTH pad 1 [/IGN1] of J3
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(62.7059 mm, 80.6900 mm): PTH pad 1 [/IGN2] of R24
+    @(71.3600 mm, 71.0000 mm): PTH pad 34 [/IGN2] of J1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(71.3600 mm, 71.0000 mm): PTH pad 34 [/IGN2] of J1
+    @(64.5000 mm, 56.3675 mm): PTH pad 2 [/IGN2] of J3
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.5000 mm, 139.4950 mm): PTH pad 3 [/IAT] of RV5
+    @(89.1400 mm, 71.0000 mm): PTH pad 20 [/IAT] of J1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(106.2353 mm, 80.6900 mm): PTH pad 1 [/INJ3] of R29
+    @(109.4600 mm, 68.4600 mm): PTH pad 3 [/INJ3] of J1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(109.4600 mm, 68.4600 mm): PTH pad 3 [/INJ3] of J1
+    @(93.0000 mm, 56.3675 mm): PTH pad 1 [/INJ3] of J6
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(106.2353 mm, 88.3100 mm): PTH pad 2 [Net-(DZ7-K)] of R29
+    @(68.5000 mm, 100.1100 mm): PTH pad 9 [Net-(DZ7-K)] of U6
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(110.5882 mm, 88.3100 mm): PTH pad 1 [Net-(DZ7-K)] of DZ7
+    @(106.2353 mm, 88.3100 mm): PTH pad 2 [Net-(DZ7-K)] of R29
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(105.0000 mm, 56.3675 mm): PTH pad 1 [/FAN] of J7
+    @(94.2200 mm, 68.4600 mm): PTH pad 15 [/FAN] of J1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(123.6471 mm, 80.6900 mm): PTH pad 1 [/FAN] of R31
+    @(105.0000 mm, 56.3675 mm): PTH pad 1 [/FAN] of J7
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(71.4118 mm, 88.3100 mm): PTH pad 2 [Net-(DZ3-K)] of R25
+    @(54.3800 mm, 112.4600 mm): PTH pad 14 [Net-(DZ3-K)] of U5
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(75.7647 mm, 88.3100 mm): PTH pad 1 [Net-(DZ3-K)] of DZ3
+    @(71.4118 mm, 88.3100 mm): PTH pad 2 [Net-(DZ3-K)] of R25
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(99.3000 mm, 68.4600 mm): PTH pad 11 [/MAP] of J1
+    @(119.0000 mm, 111.0000 mm): PTH pad 1 [/MAP] of R15
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(119.6900 mm, 116.1900 mm): PTH pad 1 [/MAP] of U4
+    @(119.0000 mm, 111.0000 mm): PTH pad 1 [/MAP] of R15
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(128.0000 mm, 56.3675 mm): PTH pad 1 [/MAP] of J12
+    @(99.3000 mm, 68.4600 mm): PTH pad 11 [/MAP] of J1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(115.5000 mm, 117.8100 mm): PTH pad 1 [Net-(U4A--)] of R16
+    @(119.6900 mm, 118.7300 mm): PTH pad 2 [Net-(U4A--)] of U4
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(119.6900 mm, 118.7300 mm): PTH pad 2 [Net-(U4A--)] of U4
+    @(126.6200 mm, 111.0000 mm): PTH pad 2 [Net-(U4A--)] of R15
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(126.6200 mm, 111.0000 mm): PTH pad 2 [Net-(U4A--)] of R15
+    @(125.5000 mm, 106.5000 mm): PTH pad 3 [Net-(U4A--)] of RV2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(135.0800 mm, 146.0000 mm): PTH pad 1 [+12V] of U3
+    @(141.0449 mm, 146.5000 mm): PTH pad 1 [+12V] of C4
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(135.5000 mm, 139.5000 mm): PTH pad 1 [+12V] of C1
+    @(135.0800 mm, 146.0000 mm): PTH pad 1 [+12V] of U3
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(141.0449 mm, 146.5000 mm): PTH pad 1 [+12V] of C4
+    @(145.3675 mm, 139.5000 mm): PTH pad 1 [+12V] of J2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(62.0000 mm, 117.5400 mm): PTH pad 1 [+3V3] of U5
+    @(76.1200 mm, 117.8900 mm): PTH pad 1 [+3V3] of U6
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(76.1200 mm, 117.8900 mm): PTH pad 1 [+3V3] of U6
+    @(84.5000 mm, 100.3600 mm): PTH pad 1 [+3V3] of U1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(76.1200 mm, 110.2700 mm): PTH pad 4 [Net-(U1-MTDO/GPIO15/ADC2_CH3)] of U6
+    @(109.9000 mm, 138.4600 mm): PTH pad 23 [Net-(U1-MTDO/GPIO15/ADC2_CH3)] of U1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(88.8235 mm, 88.3100 mm): PTH pad 2 [Net-(DZ5-K)] of R27
+    @(76.1200 mm, 107.7300 mm): PTH pad 5 [Net-(DZ5-K)] of U6
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(93.1765 mm, 88.3100 mm): PTH pad 1 [Net-(DZ5-K)] of DZ5
+    @(88.8235 mm, 88.3100 mm): PTH pad 2 [Net-(DZ5-K)] of R27
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(76.1200 mm, 105.1900 mm): PTH pad 6 [Net-(U1-GPIO16)] of U6
+    @(109.9000 mm, 128.3000 mm): PTH pad 27 [Net-(U1-GPIO16)] of U1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(97.5294 mm, 88.3100 mm): PTH pad 2 [Net-(DZ6-K)] of R28
+    @(76.1200 mm, 102.6500 mm): PTH pad 7 [Net-(DZ6-K)] of U6
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.8824 mm, 88.3100 mm): PTH pad 1 [Net-(DZ6-K)] of DZ6
+    @(97.5294 mm, 88.3100 mm): PTH pad 2 [Net-(DZ6-K)] of R28
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(68.5000 mm, 102.6500 mm): PTH pad 10 [Net-(U1-GPIO17)] of U6
+    @(109.9000 mm, 125.7600 mm): PTH pad 28 [Net-(U1-GPIO17)] of U1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(68.5000 mm, 107.7300 mm): PTH pad 12 [Net-(U1-GPIO18)] of U6
+    @(109.9000 mm, 120.6800 mm): PTH pad 30 [Net-(U1-GPIO18)] of U1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(82.0000 mm, 56.3675 mm): PTH pad 1 [/INJ1] of J5
+    @(88.8235 mm, 80.6900 mm): PTH pad 1 [/INJ1] of R27
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(88.8235 mm, 80.6900 mm): PTH pad 1 [/INJ1] of R27
+    @(112.0000 mm, 68.4600 mm): PTH pad 1 [/INJ1] of J1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(87.0000 mm, 56.3675 mm): PTH pad 2 [/INJ2] of J5
+    @(97.5294 mm, 80.6900 mm): PTH pad 1 [/INJ2] of R28
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(97.5294 mm, 80.6900 mm): PTH pad 1 [/INJ2] of R28
+    @(112.0000 mm, 71.0000 mm): PTH pad 2 [/INJ2] of J1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(106.9200 mm, 68.4600 mm): PTH pad 5 [/INJ4] of J1
+    @(98.0000 mm, 56.3675 mm): PTH pad 2 [/INJ4] of J6
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(114.9412 mm, 80.6900 mm): PTH pad 1 [/INJ4] of R30
+    @(106.9200 mm, 68.4600 mm): PTH pad 5 [/INJ4] of J1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(75.5000 mm, 56.3675 mm): PTH pad 2 [/IGN4] of J4
+    @(80.1176 mm, 80.6900 mm): PTH pad 1 [/IGN4] of R26
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(80.1176 mm, 80.6900 mm): PTH pad 1 [/IGN4] of R26
+    @(104.3800 mm, 71.0000 mm): PTH pad 8 [/IGN4] of J1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(78.9800 mm, 71.0000 mm): PTH pad 28 [/5V] of J1
+    @(96.7600 mm, 68.4600 mm): PTH pad 13 [/5V] of J1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(127.3100 mm, 118.7300 mm): PTH pad 7 [/CLT] of U4
+    @(140.0000 mm, 121.0000 mm): PTH pad 1 [/CLT] of R17
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(127.3100 mm, 118.7300 mm): PTH pad 7 [/CLT] of U4
+    @(133.0000 mm, 56.3675 mm): PTH pad 2 [/CLT] of J12
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(133.0000 mm, 56.3675 mm): PTH pad 2 [/CLT] of J12
+    @(89.1400 mm, 68.4600 mm): PTH pad 19 [/CLT] of J1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(57.5000 mm, 139.0000 mm): PTH pad 3 [/O2] of RV4
+    @(86.6000 mm, 68.4600 mm): PTH pad 21 [/O2] of J1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.5000 mm, 128.5000 mm): PTH pad 1 [/TPS] of RV3
+    @(72.0000 mm, 131.3100 mm): PTH pad 1 [/TPS] of R21
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(86.6000 mm, 71.0000 mm): PTH pad 22 [/TPS] of J1
+    @(66.5000 mm, 128.5000 mm): PTH pad 1 [/TPS] of RV3
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(84.0600 mm, 71.0000 mm): PTH pad 24 [/CAM1] of J1
+    @(132.5000 mm, 98.0400 mm): PTH pad 3 [/CAM1] of U2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.5000 mm, 98.0400 mm): PTH pad 3 [/CAM1] of U2
+    @(145.3675 mm, 75.0000 mm): PTH pad 1 [/CAM1] of J9
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(81.5200 mm, 68.4600 mm): PTH pad 25 [/CRANK] of J1
+    @(132.5000 mm, 105.6600 mm): PTH pad 6 [/CRANK] of U2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.5000 mm, 105.6600 mm): PTH pad 6 [/CRANK] of U2
+    @(145.3675 mm, 81.5000 mm): PTH pad 2 [/CRANK] of J10
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(71.3600 mm, 68.4600 mm): PTH pad 33 [/IGN3] of J1
+    @(70.5000 mm, 56.3675 mm): PTH pad 1 [/IGN3] of J4
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(71.4118 mm, 80.6900 mm): PTH pad 1 [/IGN3] of R25
+    @(71.3600 mm, 68.4600 mm): PTH pad 33 [/IGN3] of J1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(68.8200 mm, 68.4600 mm): PTH pad 35 [/BOOST] of J1
+    @(121.5000 mm, 56.3675 mm): PTH pad 2 [/BOOST] of J8
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.2800 mm, 68.4600 mm): PTH pad 37 [/IDLE] of J1
+    @(110.0000 mm, 56.3675 mm): PTH pad 2 [/IDLE] of J7
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.2800 mm, 71.0000 mm): PTH pad 38 [/VVT] of J1
+    @(116.5000 mm, 56.3675 mm): PTH pad 1 [/VVT] of J8
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(127.3100 mm, 123.8100 mm): PTH pad 5 [Net-(U1-DAC_2/ADC2_CH9/GPIO26)] of U4
+    @(84.5000 mm, 123.2200 mm): PTH pad 10 [Net-(U1-DAC_2/ADC2_CH9/GPIO26)] of U1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.3800 mm, 128.5000 mm): PTH pad 1 [Net-(U1-DAC_2/ADC2_CH9/GPIO26)] of R14
+    @(127.3100 mm, 123.8100 mm): PTH pad 5 [Net-(U1-DAC_2/ADC2_CH9/GPIO26)] of U4
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(54.0000 mm, 88.3100 mm): PTH pad 2 [Net-(DZ1-K)] of R23
+    @(54.3800 mm, 99.7600 mm): PTH pad 9 [Net-(DZ1-K)] of U5
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(58.3529 mm, 88.3100 mm): PTH pad 1 [Net-(DZ1-K)] of DZ1
+    @(54.0000 mm, 88.3100 mm): PTH pad 2 [Net-(DZ1-K)] of R23
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(84.5000 mm, 135.9200 mm): PTH pad 15 [Net-(U1-MTCK/GPIO13/ADC2_CH4)] of U1
+    @(132.5000 mm, 95.5000 mm): PTH pad 2 [Net-(U1-MTCK/GPIO13/ADC2_CH4)] of U2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(84.5000 mm, 130.8400 mm): PTH pad 13 [Net-(U1-MTDI/GPIO12/ADC2_CH5)] of U1
+    @(132.5000 mm, 103.1200 mm): PTH pad 5 [Net-(U1-MTDI/GPIO12/ADC2_CH5)] of U2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(140.1200 mm, 108.2000 mm): PTH pad 8 [/CAM2] of U2
+    @(145.3675 mm, 58.5000 mm): PTH pad 2 [/CAM2] of J11
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(84.5000 mm, 128.3000 mm): PTH pad 12 [Net-(U1-MTMS/GPIO14/ADC2_CH6)] of U1
+    @(140.1200 mm, 105.6600 mm): PTH pad 9 [Net-(U1-MTMS/GPIO14/ADC2_CH6)] of U2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.1900 mm, 124.5000 mm): PTH pad 1 [Net-(U4B--)] of R18
+    @(132.3800 mm, 121.0000 mm): PTH pad 2 [Net-(U4B--)] of R17
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.3800 mm, 121.0000 mm): PTH pad 2 [Net-(U4B--)] of R17
+    @(127.3100 mm, 121.2700 mm): PTH pad 6 [Net-(U4B--)] of U4
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.3800 mm, 121.0000 mm): PTH pad 2 [Net-(U4B--)] of R17
+    @(133.5000 mm, 114.1500 mm): PTH pad 3 [Net-(U4B--)] of RV1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(80.1176 mm, 88.3100 mm): PTH pad 2 [Net-(DZ4-K)] of R26
+    @(62.0000 mm, 112.4600 mm): PTH pad 3 [Net-(DZ4-K)] of U5
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(84.4706 mm, 88.3100 mm): PTH pad 1 [Net-(DZ4-K)] of DZ4
+    @(80.1176 mm, 88.3100 mm): PTH pad 2 [Net-(DZ4-K)] of R26
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(62.0000 mm, 115.0000 mm): PTH pad 2 [Net-(U1-GPIO23)] of U5
+    @(109.9000 mm, 102.9000 mm): PTH pad 37 [Net-(U1-GPIO23)] of U1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(62.0000 mm, 104.8400 mm): PTH pad 6 [Net-(U1-ADC2_CH7/GPIO27)] of U5
+    @(84.5000 mm, 125.7600 mm): PTH pad 11 [Net-(U1-ADC2_CH7/GPIO27)] of U1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(54.3800 mm, 102.3000 mm): PTH pad 10 [Net-(U1-GPIO19)] of U5
+    @(109.9000 mm, 118.1400 mm): PTH pad 31 [Net-(U1-GPIO19)] of U1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(62.7059 mm, 88.3100 mm): PTH pad 2 [Net-(DZ2-K)] of R24
+    @(54.3800 mm, 104.8400 mm): PTH pad 11 [Net-(DZ2-K)] of U5
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(67.0588 mm, 88.3100 mm): PTH pad 1 [Net-(DZ2-K)] of DZ2
+    @(62.7059 mm, 88.3100 mm): PTH pad 2 [Net-(DZ2-K)] of R24
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(54.3800 mm, 107.3800 mm): PTH pad 12 [Net-(U1-GPIO21)] of U5
+    @(109.9000 mm, 113.0600 mm): PTH pad 33 [Net-(U1-GPIO21)] of U1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(54.3800 mm, 115.0000 mm): PTH pad 15 [Net-(U1-GPIO22)] of U5
+    @(109.9000 mm, 105.4400 mm): PTH pad 36 [Net-(U1-GPIO22)] of U1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(72.0000 mm, 123.6900 mm): PTH pad 2 [Net-(U1-VDET_1/GPIO34/ADC1_CH6)] of R21
+    @(77.5000 mm, 123.6900 mm): PTH pad 1 [Net-(U1-VDET_1/GPIO34/ADC1_CH6)] of R22
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(77.5000 mm, 123.6900 mm): PTH pad 1 [Net-(U1-VDET_1/GPIO34/ADC1_CH6)] of R22
+    @(84.5000 mm, 110.5200 mm): PTH pad 5 [Net-(U1-VDET_1/GPIO34/ADC1_CH6)] of U1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(115.5000 mm, 121.0000 mm): PTH pad 1 [Net-(U1-DAC_1/ADC2_CH8/GPIO25)] of R13
+    @(84.5000 mm, 120.6800 mm): PTH pad 9 [Net-(U1-DAC_1/ADC2_CH8/GPIO25)] of U1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(119.6900 mm, 121.2700 mm): PTH pad 3 [Net-(U1-DAC_1/ADC2_CH8/GPIO25)] of U4
+    @(115.5000 mm, 121.0000 mm): PTH pad 1 [Net-(U1-DAC_1/ADC2_CH8/GPIO25)] of R13
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(109.9000 mm, 130.8400 mm): PTH pad 26 [Net-(U1-ADC2_CH0/GPIO4)] of U1
+    @(145.5000 mm, 112.0000 mm): PTH pad 1 [Net-(U1-ADC2_CH0/GPIO4)] of SW2
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **
