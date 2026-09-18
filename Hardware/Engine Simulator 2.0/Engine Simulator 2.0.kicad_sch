@@ -1132,202 +1132,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:Jack-DC"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 0 5.334 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Jack-DC"
-				(at 0 -5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 1.27 -1.016 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 1.27 -1.016 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "DC Barrel Jack"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "DC power barrel jack connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "BarrelJack*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Jack-DC_0_1"
-				(rectangle
-					(start -5.08 3.81)
-					(end 5.08 -3.81)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.81 -2.54) (xy -2.54 -2.54) (xy -1.27 -1.27) (xy 0 -2.54) (xy 2.54 -2.54) (xy 5.08 -2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -3.302 1.905)
-					(mid -3.9343 2.54)
-					(end -3.302 3.175)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -3.302 1.905)
-					(mid -3.9343 2.54)
-					(end -3.302 3.175)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start 3.683 3.175)
-					(end -3.302 1.905)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 2.54) (xy 3.81 2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Jack-DC_1_1"
-				(pin passive line
-					(at 7.62 2.54 180)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -2.54 180)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Connector:Screw_Terminal_01x02"
 			(pin_names
 				(offset 1.016)
@@ -3718,6 +3522,296 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "PCM_Capacitor_AKL:CP_Radial_D5.0mm_P2.00mm"
+			(body_styles demorgan)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "CP_Radial_D5.0mm_P2.00mm"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "PCM_Capacitor_THT_AKL:CP_Radial_D5.0mm_P2.00mm"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "THT Electrolytic Capacitor, 5.0mm Diameter, 2.00mm Pitch, European Symbol, Alternate KiCad Library"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cap capacitor polarized eu tht radial electrolytic 5mm 2.00mm"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "CP_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CP_Radial_D5.0mm_P2.00mm_0_1"
+				(rectangle
+					(start -2.286 1.016)
+					(end 2.286 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 2.286) (xy -0.762 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 2.794) (xy -1.27 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 2.286 -0.508)
+					(end -2.286 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "CP_Radial_D5.0mm_P2.00mm_0_2"
+				(polyline
+					(pts
+						(xy -2.54 -2.54) (xy -0.6604 -0.6604)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.8796 0.6096) (xy 0.6096 -1.8796) (xy 0.9652 -1.524) (xy -1.524 0.9652) (xy -1.8796 0.6096)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.9652 1.524) (xy 1.524 -0.9652) (xy 1.8796 -0.6096) (xy -0.6096 1.8796) (xy -0.9652 1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.032) (xy 1.016 2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 2.54) (xy 0.508 1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.6604 0.6604) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "CP_Radial_D5.0mm_P2.00mm_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "CP_Radial_D5.0mm_P2.00mm_1_2"
+				(pin passive line
+					(at 2.54 2.54 270)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -2.54 -2.54 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "PCM_Diode_Zener_AKL:BZX55-C3V6"
 			(body_styles demorgan)
 			(pin_numbers
@@ -5865,10 +5959,22 @@
 		(uuid "0aefdcf6-4f34-4303-b66a-ad4dc76888c8")
 	)
 	(junction
+		(at 142.24 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "11ea2060-cc76-418f-98f7-862b7d605a7a")
+	)
+	(junction
 		(at 181.61 100.33)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "13371756-f851-4aa7-9270-ee6269ef619e")
+	)
+	(junction
+		(at 64.77 157.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1bcd24e7-4391-4f5f-a47f-c658ab8dae1c")
 	)
 	(junction
 		(at 24.13 43.18)
@@ -5901,16 +6007,16 @@
 		(uuid "24e53d70-bea6-4292-9766-a497c50d2d15")
 	)
 	(junction
-		(at 99.06 157.48)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "25e19163-cc66-46ee-baa5-eaf928539166")
-	)
-	(junction
 		(at 95.25 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2a1bac98-450e-4d6f-9331-e8a981e9770b")
+	)
+	(junction
+		(at 91.44 157.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2abc84cc-59cd-4253-b8ff-c9489accc364")
 	)
 	(junction
 		(at 134.62 24.13)
@@ -5931,10 +6037,10 @@
 		(uuid "2dbe3249-530f-434b-b9ea-2263194afd8e")
 	)
 	(junction
-		(at 73.66 149.86)
+		(at 99.06 149.86)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "31291d00-08a0-4634-937d-b08054eae4eb")
+		(uuid "2dd40c98-0a20-4d8c-81b8-011eaca8f731")
 	)
 	(junction
 		(at 46.99 90.17)
@@ -5967,6 +6073,12 @@
 		(uuid "3c525e0f-7161-4f70-9683-3c2d523e9e28")
 	)
 	(junction
+		(at 149.86 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3f1274f2-fc9b-45c2-8bc0-a6f24c256186")
+	)
+	(junction
 		(at 27.94 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5991,6 +6103,12 @@
 		(uuid "45c6e6c3-ce6e-4b3e-a01a-45c26968a915")
 	)
 	(junction
+		(at 99.06 157.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "475fae73-26ad-4052-ba73-6baca5934c00")
+	)
+	(junction
 		(at 204.47 118.11)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6009,12 +6127,6 @@
 		(uuid "4c9e5dbc-a2a5-40f4-99de-83d6027a4edf")
 	)
 	(junction
-		(at 73.66 157.48)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4dd31cb5-a70c-4346-9cb5-17995431019f")
-	)
-	(junction
 		(at 74.93 35.56)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6025,6 +6137,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "53292e02-790e-4c2c-b745-b71777c913d0")
+	)
+	(junction
+		(at 140.97 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "55583a62-ddca-49b4-b000-78a4c46f0756")
 	)
 	(junction
 		(at 52.07 33.02)
@@ -6063,10 +6181,28 @@
 		(uuid "63df0ca2-2a5c-4356-acf4-a12913d8dd39")
 	)
 	(junction
+		(at 58.42 149.86)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "63ed2c89-8256-471e-9cb7-5c4c2ba094bc")
+	)
+	(junction
+		(at 68.58 157.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "68fd746d-4347-4403-8910-b0565c75637c")
+	)
+	(junction
 		(at 205.74 102.87)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "698b8911-db0a-481c-b701-3ccff82ae165")
+	)
+	(junction
+		(at 68.58 149.86)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6c807084-cbdf-452d-8055-b2a151195fe6")
 	)
 	(junction
 		(at 182.88 20.32)
@@ -6099,6 +6235,12 @@
 		(uuid "739e6a65-9f1a-4a82-b558-394f7a08a73d")
 	)
 	(junction
+		(at 91.44 149.86)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "75ad4822-5af9-4fb4-8c25-ab16d67cde8f")
+	)
+	(junction
 		(at 162.56 50.8)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6121,6 +6263,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "888c2398-eecf-4a08-9ab8-7bf3cfa136e9")
+	)
+	(junction
+		(at 73.66 149.86)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "89925d12-8cde-45f4-adc9-90fc486a061d")
 	)
 	(junction
 		(at 41.91 68.58)
@@ -6195,12 +6343,6 @@
 		(uuid "ade3276f-0c17-4e8f-90d1-0e3c139c7c8e")
 	)
 	(junction
-		(at 88.9 157.48)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "af4e366e-4e6d-483b-b67a-beef854e3744")
-	)
-	(junction
 		(at 104.14 69.85)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6211,12 +6353,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b0cdf775-6542-454b-8c3f-ef78611a4145")
-	)
-	(junction
-		(at 77.47 157.48)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b7ead93a-205a-43f3-be16-90d2cb8672d6")
 	)
 	(junction
 		(at 124.46 25.4)
@@ -6285,6 +6421,12 @@
 		(uuid "cc88e557-da1e-4481-b932-2a9305ace6c0")
 	)
 	(junction
+		(at 58.42 157.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cd734e7b-8f84-476e-af22-3d0104816f7d")
+	)
+	(junction
 		(at 208.28 110.49)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6345,12 +6487,6 @@
 		(uuid "e9c5c012-f4a6-4e47-8517-271cc35c0cce")
 	)
 	(junction
-		(at 99.06 149.86)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ea953785-b42e-45f9-a7c1-1df9bf6fa512")
-	)
-	(junction
 		(at 24.13 31.75)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6397,6 +6533,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f8e3e04a-f032-497d-9a06-0ec4bf668861")
+	)
+	(junction
+		(at 82.55 157.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fa18140c-cc9a-457c-a30b-2af43eb1d1f6")
 	)
 	(wire
 		(pts
@@ -7020,6 +7162,16 @@
 	)
 	(wire
 		(pts
+			(xy 91.44 149.86) (xy 99.06 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22dc957e-08d3-47fb-bd45-87df02ecbd8e")
+	)
+	(wire
+		(pts
 			(xy 200.66 102.87) (xy 201.93 102.87)
 		)
 		(stroke
@@ -7380,6 +7532,16 @@
 	)
 	(wire
 		(pts
+			(xy 142.24 68.58) (xy 142.24 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "395a41f9-a237-4318-be14-47c8d8f03bcd")
+	)
+	(wire
+		(pts
 			(xy 64.77 20.32) (xy 64.77 34.29)
 		)
 		(stroke
@@ -7430,7 +7592,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 139.7) (xy 77.47 139.7)
+			(xy 57.15 139.7) (xy 64.77 139.7)
 		)
 		(stroke
 			(width 0)
@@ -7467,16 +7629,6 @@
 			(type default)
 		)
 		(uuid "3f751261-2781-433b-b69b-557729c70f20")
-	)
-	(wire
-		(pts
-			(xy 88.9 157.48) (xy 99.06 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3f763c54-f1cc-4552-8cbe-5e34c92e5aca")
 	)
 	(wire
 		(pts
@@ -7620,16 +7772,6 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 151.13) (xy 71.12 149.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4a181e28-94d4-4862-b62d-6f5ba8e2810a")
-	)
-	(wire
-		(pts
 			(xy 236.22 134.62) (xy 246.38 134.62)
 		)
 		(stroke
@@ -7657,6 +7799,16 @@
 			(type default)
 		)
 		(uuid "4c395a03-e978-4d16-a472-d7c8d5c05d98")
+	)
+	(wire
+		(pts
+			(xy 68.58 149.86) (xy 73.66 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d60ee88-c1d8-456c-80a1-2f1603bcc4b0")
 	)
 	(wire
 		(pts
@@ -7870,7 +8022,7 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 149.86) (xy 99.06 149.86)
+			(xy 90.17 149.86) (xy 91.44 149.86)
 		)
 		(stroke
 			(width 0)
@@ -7920,7 +8072,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 157.48) (xy 88.9 157.48)
+			(xy 81.28 157.48) (xy 82.55 157.48)
 		)
 		(stroke
 			(width 0)
@@ -8030,6 +8182,16 @@
 	)
 	(wire
 		(pts
+			(xy 142.24 67.31) (xy 142.24 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e6e1d1d-6dfb-4505-9a66-5afafcfbd6f7")
+	)
+	(wire
+		(pts
 			(xy 107.95 111.76) (xy 106.68 111.76)
 		)
 		(stroke
@@ -8097,6 +8259,16 @@
 			(type default)
 		)
 		(uuid "64928aae-50eb-4a12-a2b8-5b809e807ac3")
+	)
+	(wire
+		(pts
+			(xy 99.06 157.48) (xy 140.97 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64aca69d-8c71-4fc7-84df-0b3ab7ad4b58")
 	)
 	(wire
 		(pts
@@ -8197,16 +8369,6 @@
 			(type default)
 		)
 		(uuid "6a7ee530-871c-4ef5-bb9e-becd65c093d2")
-	)
-	(wire
-		(pts
-			(xy 73.66 157.48) (xy 77.47 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6a9a7a0c-4f74-4632-86b0-3f9dced32c9b")
 	)
 	(wire
 		(pts
@@ -8330,6 +8492,16 @@
 	)
 	(wire
 		(pts
+			(xy 116.84 86.36) (xy 140.97 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "703d6179-d2b9-4409-ae04-c7ba22f0a84d")
+	)
+	(wire
+		(pts
 			(xy 241.3 49.53) (xy 250.19 49.53)
 		)
 		(stroke
@@ -8420,7 +8592,17 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 157.48) (xy 73.66 157.48)
+			(xy 64.77 157.48) (xy 81.28 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "761e9f03-2cda-4815-a022-f64104172aa5")
+	)
+	(wire
+		(pts
+			(xy 52.07 157.48) (xy 58.42 157.48)
 		)
 		(stroke
 			(width 0)
@@ -8800,6 +8982,16 @@
 	)
 	(wire
 		(pts
+			(xy 49.53 152.4) (xy 52.07 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c527408-8bec-49a5-8984-40802ba0fdc7")
+	)
+	(wire
+		(pts
 			(xy 99.06 69.85) (xy 104.14 69.85)
 		)
 		(stroke
@@ -8827,16 +9019,6 @@
 			(type default)
 		)
 		(uuid "8d2e37a7-8826-4fb8-a8d3-e6d0721d1c4a")
-	)
-	(wire
-		(pts
-			(xy 116.84 86.36) (xy 140.97 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8d8f06be-2523-4b76-bb2d-7ab4040776b0")
 	)
 	(wire
 		(pts
@@ -8920,6 +9102,16 @@
 	)
 	(wire
 		(pts
+			(xy 91.44 157.48) (xy 99.06 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "92af7c99-1fca-481a-8f62-0d9d767386a9")
+	)
+	(wire
+		(pts
 			(xy 27.94 20.32) (xy 24.13 20.32)
 		)
 		(stroke
@@ -8940,16 +9132,6 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 157.48) (xy 140.97 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9487d251-7db8-4511-ac18-6b6d1d4677db")
-	)
-	(wire
-		(pts
 			(xy 259.08 140.97) (xy 259.08 143.51)
 		)
 		(stroke
@@ -8967,16 +9149,6 @@
 			(type default)
 		)
 		(uuid "94f07e40-bad0-450d-b194-23f6831eb00b")
-	)
-	(wire
-		(pts
-			(xy 77.47 157.48) (xy 81.28 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9691d357-0030-419e-96fd-faf8c955c88f")
 	)
 	(wire
 		(pts
@@ -9047,6 +9219,16 @@
 			(type default)
 		)
 		(uuid "9bd0f608-af45-49b4-b447-97bb1a16e86f")
+	)
+	(wire
+		(pts
+			(xy 58.42 149.86) (xy 68.58 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d569910-7805-4dbe-8b07-daa94e30838b")
 	)
 	(wire
 		(pts
@@ -9380,6 +9562,16 @@
 	)
 	(wire
 		(pts
+			(xy 52.07 149.86) (xy 52.07 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aefb59e0-6fd7-4e21-88a8-1a4ca52d9da0")
+	)
+	(wire
+		(pts
 			(xy 241.3 57.15) (xy 278.13 57.15)
 		)
 		(stroke
@@ -9420,7 +9612,7 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 139.7) (xy 77.47 157.48)
+			(xy 64.77 139.7) (xy 64.77 157.48)
 		)
 		(stroke
 			(width 0)
@@ -9517,6 +9709,16 @@
 			(type default)
 		)
 		(uuid "b7bfb4db-d499-4f9b-858d-5e94ffaee628")
+	)
+	(wire
+		(pts
+			(xy 58.42 157.48) (xy 64.77 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b80a66b6-bb0d-423d-8501-3c228ad1835a")
 	)
 	(wire
 		(pts
@@ -9970,6 +10172,16 @@
 	)
 	(wire
 		(pts
+			(xy 52.07 154.94) (xy 52.07 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf4178e6-a86f-4a50-ba29-551ae1c2a8f8")
+	)
+	(wire
+		(pts
 			(xy 176.53 111.76) (xy 176.53 77.47)
 		)
 		(stroke
@@ -10110,7 +10322,7 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 149.86) (xy 81.28 149.86)
+			(xy 73.66 149.86) (xy 74.93 149.86)
 		)
 		(stroke
 			(width 0)
@@ -10230,7 +10442,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 149.86) (xy 73.66 149.86)
+			(xy 52.07 149.86) (xy 58.42 149.86)
 		)
 		(stroke
 			(width 0)
@@ -10307,6 +10519,26 @@
 			(type default)
 		)
 		(uuid "e1235670-4151-475a-96a6-291ee661611f")
+	)
+	(wire
+		(pts
+			(xy 149.86 67.31) (xy 149.86 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e20063a2-c164-4f27-8124-a7ee37ba7dd8")
+	)
+	(wire
+		(pts
+			(xy 49.53 154.94) (xy 52.07 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e212c3f4-2f40-493e-b22a-b00d62fbb959")
 	)
 	(wire
 		(pts
@@ -10477,6 +10709,16 @@
 			(type default)
 		)
 		(uuid "ef9b8e04-a8da-45ee-9416-9a241ea8cef2")
+	)
+	(wire
+		(pts
+			(xy 140.97 86.36) (xy 142.24 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f00c61b4-4382-4516-bd42-ccabb12ddf24")
 	)
 	(wire
 		(pts
@@ -10750,13 +10992,13 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 156.21) (xy 71.12 157.48)
+			(xy 82.55 157.48) (xy 91.44 157.48)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "fef160fd-0726-4384-aff2-e99e3c7731ff")
+		(uuid "fee15fa5-3e48-42f0-b03f-fdc153bc1af1")
 	)
 	(wire
 		(pts
@@ -12941,7 +13183,7 @@
 	)
 	(symbol
 		(lib_id "Regulator_Linear:L7805")
-		(at 88.9 149.86 0)
+		(at 82.55 149.86 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12952,7 +13194,7 @@
 		(fields_autoplaced yes)
 		(uuid "390d2086-b995-43c7-b449-ac7c566c170d")
 		(property "Reference" "U3"
-			(at 88.9 143.51 0)
+			(at 82.55 143.51 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12962,7 +13204,7 @@
 			)
 		)
 		(property "Value" "L7805"
-			(at 88.9 146.05 0)
+			(at 82.55 146.05 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12972,7 +13214,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
-			(at 89.535 153.67 0)
+			(at 83.185 153.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12985,7 +13227,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf"
-			(at 88.9 151.13 0)
+			(at 82.55 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12996,7 +13238,7 @@
 			)
 		)
 		(property "Description" "Positive 1.5A 35V Linear Regulator, Fixed Output 5V, TO-220/TO-263/TO-252"
-			(at 88.9 149.86 0)
+			(at 82.55 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13019,88 +13261,6 @@
 			(project "Engine Simulator 2.0"
 				(path "/c54f79cb-b80a-4832-95bc-74ffd69b8053"
 					(reference "U3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Screw_Terminal_01x02")
-		(at 276.86 113.03 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3910763a-a82b-4e48-97b0-e25a83631a1f")
-		(property "Reference" "J13"
-			(at 279.4 113.0299 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Screw_Terminal_01x02"
-			(at 279.4 115.5699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TerminalBlock_Altech:Altech_AK100_1x02_P5.00mm"
-			(at 276.86 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 276.86 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 276.86 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "aff00748-40a1-4fe3-bf84-a2534de8ae31")
-		)
-		(pin "2"
-			(uuid "e60901f4-dc99-4c26-8e56-ac96a9f42700")
-		)
-		(instances
-			(project "Engine Simulator 2.0"
-				(path "/c54f79cb-b80a-4832-95bc-74ffd69b8053"
-					(reference "J13")
 					(unit 1)
 				)
 			)
@@ -13179,87 +13339,6 @@
 			(project "Engine Simulator 2.0"
 				(path "/c54f79cb-b80a-4832-95bc-74ffd69b8053"
 					(reference "#PWR010")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Jack-DC")
-		(at 63.5 153.67 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3df299a5-e870-4351-b55d-beca43cb0d32")
-		(property "Reference" "J2"
-			(at 57.15 154.9401 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "Jack-DC"
-			(at 57.15 152.4001 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 64.77 154.686 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 64.77 154.686 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "DC Barrel Jack"
-			(at 63.5 153.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a09f4a48-0268-4a77-9897-624482492ef5")
-		)
-		(pin "2"
-			(uuid "9f549b5f-c871-413f-85af-9ab3a1587529")
-		)
-		(instances
-			(project "Engine Simulator 2.0"
-				(path "/c54f79cb-b80a-4832-95bc-74ffd69b8053"
-					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -14452,7 +14531,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 73.66 153.67 0)
+		(at 68.58 153.67 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14463,7 +14542,7 @@
 		(fields_autoplaced yes)
 		(uuid "51029642-a82e-4258-95bc-5ae56cc04da7")
 		(property "Reference" "C1"
-			(at 77.47 152.3999 0)
+			(at 72.39 152.3999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14474,7 +14553,7 @@
 			)
 		)
 		(property "Value" "0.33 uF"
-			(at 77.47 154.9399 0)
+			(at 72.39 154.9399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14485,7 +14564,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_THT:C_Disc_D10.5mm_W5.0mm_P5.00mm"
-			(at 74.6252 157.48 0)
+			(at 69.5452 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14496,7 +14575,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 73.66 153.67 0)
+			(at 68.58 153.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14507,7 +14586,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 73.66 153.67 0)
+			(at 68.58 153.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15723,6 +15802,87 @@
 			(project "Engine Simulator 2.0"
 				(path "/c54f79cb-b80a-4832-95bc-74ffd69b8053"
 					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_Capacitor_AKL:CP_Radial_D5.0mm_P2.00mm")
+		(at 99.06 153.67 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7760d7ff-75ca-4727-ae0b-2d13413d9a59")
+		(property "Reference" "C5"
+			(at 101.346 151.892 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47uf"
+			(at 101.346 154.432 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PCM_Capacitor_THT_AKL:CP_Radial_D5.0mm_P2.00mm"
+			(at 99.06 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 99.06 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "THT Electrolytic Capacitor, 5.0mm Diameter, 2.00mm Pitch, European Symbol, Alternate KiCad Library"
+			(at 99.06 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "355ab498-68e6-4595-896f-1fe681a56e13")
+		)
+		(pin "2"
+			(uuid "1cbf0bac-5b60-4a8c-8515-05fda8cfdffd")
+		)
+		(instances
+			(project "Engine Simulator 2.0"
+				(path "/c54f79cb-b80a-4832-95bc-74ffd69b8053"
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -17424,6 +17584,87 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 146.05 68.58 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a0c93195-e223-4dc2-96db-a87554aef733")
+		(property "Reference" "C6"
+			(at 148.336 67.056 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 150.876 67.056 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:C_Disc_D10.5mm_W5.0mm_P5.00mm"
+			(at 149.86 67.6148 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 146.05 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2435dfcd-dce0-401f-b192-c845b798df94")
+		)
+		(pin "2"
+			(uuid "cf383c80-3202-4c64-84e8-8643b2350cd7")
+		)
+		(instances
+			(project "Engine Simulator 2.0"
+				(path "/c54f79cb-b80a-4832-95bc-74ffd69b8053"
+					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "PCM_Diode_Zener_AKL:BZX55-C3V6")
 		(at 71.12 85.09 90)
 		(mirror x)
@@ -17829,7 +18070,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 99.06 153.67 0)
+		(at 91.44 153.67 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17837,10 +18078,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "b1d45c35-c4d3-4895-8ec1-a1f852298b72")
 		(property "Reference" "C2"
-			(at 102.87 152.3999 0)
+			(at 92.964 155.956 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17851,7 +18091,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 102.87 154.9399 0)
+			(at 92.964 158.496 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17862,7 +18102,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_THT:C_Disc_D10.5mm_W5.0mm_P5.00mm"
-			(at 100.0252 157.48 0)
+			(at 92.4052 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17873,7 +18113,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 99.06 153.67 0)
+			(at 91.44 153.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17884,7 +18124,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 99.06 153.67 0)
+			(at 91.44 153.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18176,6 +18416,87 @@
 			(project "Engine Simulator 2.0"
 				(path "/c54f79cb-b80a-4832-95bc-74ffd69b8053"
 					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_Capacitor_AKL:CP_Radial_D5.0mm_P2.00mm")
+		(at 58.42 153.67 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "bd9e4a32-4643-49d4-a4d0-5d366c59a51a")
+		(property "Reference" "C4"
+			(at 60.706 151.892 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "470uf"
+			(at 60.706 154.432 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PCM_Capacitor_THT_AKL:CP_Radial_D5.0mm_P2.00mm"
+			(at 58.42 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 58.42 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "THT Electrolytic Capacitor, 5.0mm Diameter, 2.00mm Pitch, European Symbol, Alternate KiCad Library"
+			(at 58.42 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "84f42c5d-827a-4a58-bb57-b11ba4ee787c")
+		)
+		(pin "2"
+			(uuid "3ae72031-e7fa-4f42-8319-e664149786c1")
+		)
+		(instances
+			(project "Engine Simulator 2.0"
+				(path "/c54f79cb-b80a-4832-95bc-74ffd69b8053"
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -19687,6 +20008,166 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 149.86 68.58 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e87f3875-42af-49c6-860d-04617b92cc6e")
+		(property "Reference" "#PWR016"
+			(at 156.21 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 153.67 68.5799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 149.86 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 149.86 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "be647cb6-a26f-448d-b9a8-cdc372811195")
+		)
+		(instances
+			(project "Engine Simulator 2.0"
+				(path "/c54f79cb-b80a-4832-95bc-74ffd69b8053"
+					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_Capacitor_AKL:CP_Radial_D5.0mm_P2.00mm")
+		(at 146.05 67.31 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "eca321cc-c59e-4dac-8f63-cb0c271f8276")
+		(property "Reference" "C7"
+			(at 144.272 65.024 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "470uf"
+			(at 146.812 65.024 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PCM_Capacitor_THT_AKL:CP_Radial_D5.0mm_P2.00mm"
+			(at 156.21 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "THT Electrolytic Capacitor, 5.0mm Diameter, 2.00mm Pitch, European Symbol, Alternate KiCad Library"
+			(at 146.05 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a72dee63-ef32-467e-b5fd-e7c077b9c2ca")
+		)
+		(pin "2"
+			(uuid "52f755fa-f241-4e6d-888a-06c5e4238310")
+		)
+		(instances
+			(project "Engine Simulator 2.0"
+				(path "/c54f79cb-b80a-4832-95bc-74ffd69b8053"
+					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "CD4050B:CD4050BE")
 		(at 21.59 168.91 0)
 		(unit 1)
@@ -20048,6 +20529,88 @@
 			(project "Engine Simulator 2.0"
 				(path "/c54f79cb-b80a-4832-95bc-74ffd69b8053"
 					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Screw_Terminal_01x02")
+		(at 44.45 152.4 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fd1ac387-f56f-4d2c-9fdc-3a03cefde8bf")
+		(property "Reference" "J2"
+			(at 44.45 158.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DC IN"
+			(at 41.91 154.9399 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TerminalBlock_Altech:Altech_AK100_1x02_P5.00mm"
+			(at 44.45 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 44.45 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 44.45 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d98b7ccc-2cf6-4ca3-a779-d590fe4be186")
+		)
+		(pin "2"
+			(uuid "71ee9a1b-a1c9-4c04-8d1e-1eca2c892793")
+		)
+		(instances
+			(project "Engine Simulator 2.0"
+				(path "/c54f79cb-b80a-4832-95bc-74ffd69b8053"
+					(reference "J2")
 					(unit 1)
 				)
 			)
