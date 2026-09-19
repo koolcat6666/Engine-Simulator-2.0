@@ -194,3 +194,13 @@ La ruota fonica puo' essere selezionata tramite:
 - La **ventola** e' gestita in retroazione: Speeduino la controlla, l'ESP32 la legge per modellare la temperatura CLT.
 - I **potenziometri IAT e O2** sono puramente manuali e non influenzano la simulazione dell'ESP32. Servono per testare le correzioni della ECU.
 - Il **PCB KiCad** (`Hardware/Engine Simulator 2.0/`) e' completo: routing a 2 strati con piano GND su B.Cu in thermal relief. DRC: **0 errori di clearance e 0 piazzole sconnesse**; restano solo warning cosmetici (altezza testo serigrafia e librerie footprint locali non abilitate). Il report aggiornato e' in `Engine Simulator 2.0-drc.rpt`.
+
+### Output di fabbricazione (Gerber + Drill)
+
+I file di fabbricazione sono generati con `kicad-cli` e pronti per qualsiasi fab (JLCPCB/PCBWay/PCBcart):
+
+- **`Hardware/Engine Simulator 2.0/Gerbers/`** — Gerber RS-274X a 9 layer (`F_Cu`, `B_Cu`, `F_Paste`, `B_Paste`, `F_Mask`, `B_Mask`, `F_SilkS`, `B_SilkS`, `Edge_Cuts`) + job file `.gbrjob`.
+- **`Hardware/Engine Simulator 2.0/Gerbers/`** — Drill Excellon separati: `-PTH.drl` (fori placcati, 0,3–2,2 mm) e `-NPTH.drl` (0 NPTH).
+- **`Hardware/Engine Simulator 2.0/Engine_Simulator_2.0_FAB_gerbers.zip`** — archivio zip di tutti i Gerber+drill pronto per l'upload diretto sul sito del fab.
+
+Scheda: **2 strati, 100×100 mm, spessore 1,6 mm, HASL**, pista min. 0,2 mm, clearance min. 0,21 mm, foro drill min. 0,3 mm (via) / 2,2 mm (fori montaggio M2, PTH collegato a GND).
