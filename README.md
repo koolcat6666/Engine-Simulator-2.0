@@ -45,14 +45,24 @@ Il sistema si collega alla centralina tramite il connettore IDC 40-pin standard 
 
 ## Funzionalita' Firmware
 
-- **63 pattern ruote foniche** (compatibile ArduStim): 60-2, 36-1, 24-1, LS1, 58X, Chrysler NGC, BMW N20, e molti altri
+- **64 pattern ruote foniche** (compatibile ArduStim): 60-2, 36-1, 24-1, LS1, 58X, Chrysler NGC, BMW N20, GM 40-tooth OSS, e molti altri
 - **Modello di inerzia RPM**: cranking 0->350 RPM, poi idle a 850 RPM + (TPS x 6150), con filtro passa-basso
 - **Pulsante Start/Stop**: avvia il motore con rampa di cranking, stabilizzazione a idle, arresto graduale
 - **Simulazione MAP dinamica**: 100 kPa a motore spento, 85 kPa in cranking, 30-100 kPa in funzione di RPM/TPS
 - **Simulazione CLT dinamica**: riscaldamento graduale, raffreddamento con ventola, legge di Newton a motore spento
 - **Interfaccia seriale USB**: protocollo ArduStim per configurazione ruota fonica e modalita' RPM da TunerStudio
 - **Monitoraggio timing Speeduino (FASE 2)**: input capture via ISR sui 9 ingressi CD4050BE (4 iniettori + 4 candele + fan) — misura on-time iniettori (ms), frequenza, duty, dwell candele e anticipo in gradi BTDC
-- **WiFi AP + Dashboard web (FASE 3)**: SSID `EngineSimulator2.0` / pass `1234567890` / IP `192.168.254.1`, dashboard fluida su `/`, selezione ruota fonica da ~75 pattern e salvataggio su NVS su `/setup`, endpoint `/api/data` JSON
+- **WiFi AP + Dashboard web (FASE 3)**: SSID `EngineSimulator2.0` / pass `1234567890` / IP `192.168.254.1`, dashboard fluida su `/`, selezione ruota fonica tra i 64 pattern e salvataggio su NVS su `/setup`, endpoint `/api/data` JSON
+
+### Stato di verifica
+
+| Modulo | Stato |
+|:-------|:------|
+| FASE 1 — Generazione Crank/Cam e modello motore | **Verificata su hardware** (Speeduino/Mega2560 legge i giri; fix registri `GPIO.out_w1ts/w1tc` in ISR per core v3.3.x) |
+| FASE 2 — Timing iniettori/candele (input capture) | **Implementata e compilata, NON ancora verificata su hardware** |
+| FASE 3 — WiFi AP + dashboard web | **Implementata e compilata, NON ancora verificata su hardware** |
+
+Dettagli e riferimenti: `firmware/WORKING_VERSION.md`.
 
 ---
 
@@ -183,3 +193,4 @@ La ruota fonica puo' essere selezionata tramite:
 - Il **MAP sensor** integrato sulla Speeduino V0.4 (IDC Pin 11) non puo' essere usato come alternativa al DAC generato dall'ESP32 per le prove di simulazione. In questo caso, il pin MAP dell'IDC va collegato al PCB del simulatore.
 - La **ventola** e' gestita in retroazione: Speeduino la controlla, l'ESP32 la legge per modellare la temperatura CLT.
 - I **potenziometri IAT e O2** sono puramente manuali e non influenzano la simulazione dell'ESP32. Servono per testare le correzioni della ECU.
+- Il **PCB KiCad** (`Hardware/Engine Simulator 2.0/`) e' completo: routing a 2 strati con piano GND su B.Cu in thermal relief. DRC: **0 errori di clearance e 0 piazzole sconnesse**; restano solo warning cosmetici (altezza testo serigrafia e librerie footprint locali non abilitate). Il report aggiornato e' in `Engine Simulator 2.0-drc.rpt`.
