@@ -77,7 +77,9 @@ Engine Simulator 2.0/
 │   └── Engine Simulator 2.0/
 │       ├── *.kicad_sch          # Schema elettrico
 │       ├── *.kicad_pcb          # Layout PCB
-│       └── *.kicad_pro          # Progetto KiCad
+│       ├── *.kicad_pro          # Progetto KiCad
+│       ├── BOM.md               # Bill of Materials (aggiornata dal netlist)
+│       └── Gerbers/             # File di fabbricazione (Gerber + drill)
 ├── doc/                         # Documentazione
 │   ├── dupont_pinout.md         # Pinout IDC 40-pin Speeduino V0.4
 │   └── esp32u_pin_assignment.md # Mappa pin ESP32U
@@ -93,12 +95,12 @@ Engine Simulator 2.0/
 | Componente | Quantita' | Descrizione |
 |:-----------|:---------:|:------------|
 | ESP32-WROOM-32U | 1 | Microcontroller principale |
-| 74AHCT125 | 4 | Level shifter 3.3V -> 5V (Crank, Cam1, Cam2) |
-| TLV2372 | 3 | Op-amp rail-to-rail (buffer MAP, CLT DAC) |
+| 74AHCT125 | 1 | Quad level shifter 3.3V -> 5V (Crank, Cam1, Cam2) |
+| TLV2372 | 1 | Doppio op-amp rail-to-rail (buffer MAP, CLT) |
 | R-78E5.0-1.0 (RECOM) | 1 | Regolatore switching drop-in 12V -> 5V, 1A, 91% |
 | Connettore IDC 40-pin | 1 | Connessione a Speeduino V0.4 |
 | CD4050BE | 2 | Hex buffer per ingressi ECU (iniettori/candele/ventola) |
-| Potenziometri trimmer | 3 | TPS, IAT, O2 (manuale) |
+| Potenziometri trimmer | 5 | (2kOhm x2, 10kOhm x3) — TPS, IAT, O2, trimmer |
 | Pulsante | 1 | Start/Stop |
 | Jack DC | 1 | Alimentazione 12V |
 
