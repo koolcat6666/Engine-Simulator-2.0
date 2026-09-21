@@ -3,9 +3,9 @@
     "GenerationSoftware": {
       "Vendor": "KiCad",
       "Application": "Pcbnew",
-      "Version": "10.0.5"
+      "Version": "10.0.4"
     },
-    "CreationDate": "2026-09-19T13:33:38+02:00"
+    "CreationDate": "2026-09-21T13:39:24+02:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -34,48 +34,108 @@
   ],
   "FilesAttributes": [
     {
-      "Path": "Engine Simulator 2.0-F_Cu.gbr",
+      "Path": "Engine Simulator 2.0-F_Cu.gtl",
       "FileFunction": "Copper,L1,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "Engine Simulator 2.0-B_Cu.gbr",
+      "Path": "Engine Simulator 2.0-B_Cu.gbl",
       "FileFunction": "Copper,L2,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "Engine Simulator 2.0-F_Paste.gbr",
+      "Path": "Engine Simulator 2.0-F_Adhesive.gta",
+      "FileFunction": "Glue,Top",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "Engine Simulator 2.0-B_Adhesive.gba",
+      "FileFunction": "Glue,Bot",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "Engine Simulator 2.0-F_Paste.gtp",
       "FileFunction": "SolderPaste,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "Engine Simulator 2.0-B_Paste.gbr",
+      "Path": "Engine Simulator 2.0-B_Paste.gbp",
       "FileFunction": "SolderPaste,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "Engine Simulator 2.0-F_Silkscreen.gbr",
+      "Path": "Engine Simulator 2.0-F_Silkscreen.gto",
       "FileFunction": "Legend,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "Engine Simulator 2.0-B_Silkscreen.gbr",
+      "Path": "Engine Simulator 2.0-B_Silkscreen.gbo",
       "FileFunction": "Legend,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "Engine Simulator 2.0-F_Mask.gbr",
+      "Path": "Engine Simulator 2.0-F_Mask.gts",
       "FileFunction": "SolderMask,Top",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "Engine Simulator 2.0-B_Mask.gbr",
+      "Path": "Engine Simulator 2.0-B_Mask.gbs",
       "FileFunction": "SolderMask,Bot",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "Engine Simulator 2.0-Edge_Cuts.gbr",
+      "Path": "Engine Simulator 2.0-User_Drawings.gbr",
+      "FileFunction": "Other,User",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "Engine Simulator 2.0-User_Comments.gbr",
+      "FileFunction": "Other,User",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "Engine Simulator 2.0-User_Eco1.gbr",
+      "FileFunction": "Other,User",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "Engine Simulator 2.0-User_Eco2.gbr",
+      "FileFunction": "Other,User",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "Engine Simulator 2.0-Edge_Cuts.gm1",
       "FileFunction": "Profile",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "Engine Simulator 2.0-F_Fab.gbr",
+      "FileFunction": "AssemblyDrawing,Top",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "Engine Simulator 2.0-B_Fab.gbr",
+      "FileFunction": "AssemblyDrawing,Bot",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "Engine Simulator 2.0-User_1.gbr",
+      "FileFunction": "Other,User",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "Engine Simulator 2.0-User_2.gbr",
+      "FileFunction": "Other,User",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "Engine Simulator 2.0-User_3.gbr",
+      "FileFunction": "Other,User",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "Engine Simulator 2.0-User_4.gbr",
+      "FileFunction": "Other,User",
       "FilePolarity": "Positive"
     }
   ],

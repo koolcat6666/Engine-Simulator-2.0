@@ -7726,259 +7726,253 @@
 			)
 		)
 	)
-	(footprint "Package_TO_SOT_THT:TO-220-3_Vertical"
-		(layer "F.Cu")
-		(uuid "66321418-04cc-4a4f-b34e-cff2a8be6fae")
-		(at 135.08 146 180)
-		(descr "TO-220-3, Vertical, RM 2.54mm, see https://www.vishay.com/docs/66542/to-220-1.pdf")
-		(tags "TO-220-3 Vertical RM 2.54mm")
-		(property "Reference" "U3"
-			(at 4.58 -2 0)
-			(layer "F.SilkS")
-			(uuid "9ce303a8-e321-4324-95ae-d55b07f66bf0")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Value" "L7805"
-			(at 2.54 2.2 0)
-			(layer "F.Fab")
-			(uuid "b0de1d5a-366b-49e9-8e25-7d1dc369110e")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf"
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "757ad916-d0c3-4b4d-93ae-9d09dd33036a")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Positive 1.5A 35V Linear Regulator, Fixed Output 5V, TO-220/TO-263/TO-252"
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "6e81ca39-50b1-4855-9019-b329431e9bcb")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "package/TO_SOT/THT"
-			(at 0 0 0)
-			(layer "F.SilkS")
-			(hide yes)
-			(uuid "5bb708fb-2ce9-47f6-86ae-9b217d1e38a9")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property ki_fp_filters "TO?252* TO?263* TO?220*")
-		(path "/390d2086-b995-43c7-b449-ac7c566c170d")
-		(sheetname "/")
-		(sheetfile "Engine Simulator 2.0.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2" "3")
-			)
-		)
-		(attr through_hole)
-		(duplicate_pad_numbers_are_jumpers no)
-		(fp_line
-			(start 7.65 1.36)
-			(end -2.57 1.36)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "5019b517-8350-4bbe-ae61-9951b4c70ef6")
-		)
-		(fp_line
-			(start 7.65 -3.26)
-			(end 7.65 1.36)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "bffdbe89-05ab-49ff-bce3-702876917aad")
-		)
-		(fp_line
-			(start 4.39 -3.26)
-			(end 4.39 -1.88)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "76367b15-f262-41c3-a799-9cbbcef01800")
-		)
-		(fp_line
-			(start 0.69 -3.26)
-			(end 0.69 -1.88)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "75f515f6-67a8-4758-8121-e189cbd2766b")
-		)
-		(fp_line
-			(start -2.57 1.36)
-			(end -2.57 -3.26)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "47d758e2-56bc-46fa-9746-b7141fd6a8bf")
-		)
-		(fp_line
-			(start -2.57 -1.88)
-			(end 7.65 -1.88)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "1bd4ef2e-e6f9-45a1-a643-1f68ebe0f15d")
-		)
-		(fp_line
-			(start -2.57 -3.26)
-			(end 7.65 -3.26)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "3313365f-f994-40ff-98f8-da62e4237086")
-		)
-		(fp_rect
-			(start -2.71 -3.4)
-			(end 7.79 1.5)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(fill no)
-			(layer "F.CrtYd")
-			(uuid "b03f9464-a3f0-4547-ae79-18aba4b0736f")
-		)
-		(fp_line
-			(start 4.39 -3.15)
-			(end 4.39 -1.88)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "25052675-ed18-4422-b529-315065385ece")
-		)
-		(fp_line
-			(start 0.69 -3.15)
-			(end 0.69 -1.88)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "c2269179-7a5e-4c40-8455-e0982c990d42")
-		)
-		(fp_line
-			(start -2.46 -1.88)
-			(end 7.54 -1.88)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "7bcb9d2f-e18f-4872-b1bb-43c09e441a57")
-		)
-		(fp_rect
-			(start -2.46 -3.15)
-			(end 7.54 1.25)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(fill no)
-			(layer "F.Fab")
-			(uuid "1b3d96fb-5f92-463e-a547-bce4370e7c1b")
-		)
-		(fp_text user "${REFERENCE}"
-			(at 2.54 -0.95 0)
-			(layer "F.Fab")
-			(uuid "0c6720d3-ebc2-4399-af48-33d35c266476")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(pad "1" thru_hole rect
-			(at 0 0 180)
-			(size 1.905 2)
-			(drill 1.1)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net "+12V")
-			(pinfunction "IN_1")
-			(pintype "power_in")
-			(uuid "08bbec7d-4289-4917-aee8-d42ab1c9349c")
-		)
-		(pad "2" thru_hole oval
-			(at 2.54 0 180)
-			(size 1.905 2)
-			(drill 1.1)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net "GND")
-			(pinfunction "GND_2")
-			(pintype "power_in")
-			(uuid "705e2959-0df9-49ee-8d43-f7e8a71e0cdf")
-		)
-		(pad "3" thru_hole oval
-			(at 5.08 0 180)
-			(size 1.905 2)
-			(drill 1.1)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net "+5V")
-			(pinfunction "OUT_3")
-			(pintype "power_out")
-			(uuid "05b3aaa6-f45b-45d8-ad88-0747b1e6dad4")
-		)
-		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_THT.3dshapes/TO-220-3_Vertical.step"
-			(offset
-				(xyz 0 0 0)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 0 0 0)
-			)
-		)
-	)
+(footprint "Converter_DCDC:Converter_DCDC_RECOM_R-78E-0.5_THT"
+    (layer "F.Cu")
+    (uuid "f02f56db-3520-42ae-a2fc-c380554581e2")
+    (at 135.08 146 180)
+    (descr "DCDC-Converter, RECOM, RECOM_R-78E-0.5, SIP-3, pitch 2.54mm, package size 11.6x8.5x10.4mm^3, https://www.recom-power.com/pdf/Innoline/R-78Exx-0.5.pdf")
+    (tags "dc-dc recom buck sip-3 pitch 2.54mm")
+    (property "Reference" "U3"
+        (at 2.54 -7.56 0)
+        (layer "F.SilkS")
+        (effects
+            (font
+                (size 1 1)
+                (thickness 0.15)
+            )
+        )
+    )
+    (property "Value" "R-78E5.0-1.0"
+        (at 2.54 3 0)
+        (layer "F.Fab")
+        (effects
+            (font
+                (size 1 1)
+                (thickness 0.15)
+            )
+        )
+    )
+    (property "Datasheet" "https://www.recom-power.com/pdf/Innoline/R-78E-1.0.pdf"
+        (at 0 0 0)
+        (layer "F.Fab")
+        (hide yes)
+        (effects
+            (font
+                (size 1.27 1.27)
+            )
+        )
+    )
+    (property "Description" "1A High Efficiency RU DC/DC Switching Regulator, Output 5V, 8-28V Input, SIP3"
+        (at 0 0 0)
+        (layer "F.Fab")
+        (hide yes)
+        (effects
+            (font
+                (size 1.27 1.27)
+            )
+        )
+    )
+    (property "KiLib_Generator" "Recom_DCDC"
+        (at 0 0 0)
+        (layer "F.SilkS")
+        (hide yes)
+        (effects
+            (font
+                (size 1 1)
+                (thickness 0.15)
+            )
+        )
+    )
+    (property ki_fp_filters "RECOM_R-78E*")
+    (path "/390d2086-b995-43c7-b449-ac7c566c170d")
+    (sheetname "/")
+    (sheetfile "Engine Simulator 2.0.kicad_sch")
+    (units
+        (unit
+            (name "A")
+            (pins "1" "2" "3")
+        )
+    )
+    (attr through_hole)
+    (duplicate_pad_numbers_are_jumpers no)
+    (fp_line
+        (start -3.61 1.06)
+        (end -3.61 2.3)
+        (stroke
+            (width 0.12)
+            (type solid)
+        )
+        (layer "F.SilkS")
+        (uuid "e0d7c7aa-8f51-4451-a0f6-0f45c667272c")
+    )
+    (fp_line
+        (start -3.61 2.3)
+        (end -2.37 2.3)
+        (stroke
+            (width 0.12)
+            (type solid)
+        )
+        (layer "F.SilkS")
+        (uuid "2ca56a8e-babc-4804-9d97-d4fdb1ee8a56")
+    )
+    (fp_line
+        (start -3.37 -6.56)
+        (end 8.35 -6.56)
+        (stroke
+            (width 0.12)
+            (type solid)
+        )
+        (layer "F.SilkS")
+        (uuid "6a4ca10c-e439-4e84-8a65-9ab978d7250a")
+    )
+    (fp_line
+        (start -3.37 2.06)
+        (end -3.37 -6.56)
+        (stroke
+            (width 0.12)
+            (type solid)
+        )
+        (layer "F.SilkS")
+        (uuid "6920043d-c979-425e-997c-4b3e7d91a696")
+    )
+    (fp_line
+        (start 8.35 -6.56)
+        (end 8.35 2.06)
+        (stroke
+            (width 0.12)
+            (type solid)
+        )
+        (layer "F.SilkS")
+        (uuid "f6d57adc-ab35-4b0d-8a04-25cd39ca3e34")
+    )
+    (fp_line
+        (start 8.35 2.06)
+        (end -3.37 2.06)
+        (stroke
+            (width 0.12)
+            (type solid)
+        )
+        (layer "F.SilkS")
+        (uuid "fc399405-67a9-49ce-8a24-96435c91e30c")
+    )
+    (fp_rect
+        (start -3.57 -6.75)
+        (end 8.54 2.25)
+        (stroke
+            (width 0.05)
+            (type solid)
+        )
+        (fill no)
+        (layer "F.CrtYd")
+        (uuid "73dbf483-339f-4b8c-bd74-8de560fd765d")
+    )
+    (fp_line
+        (start -3.31 -6.5)
+        (end 8.29 -6.5)
+        (stroke
+            (width 0.1)
+            (type solid)
+        )
+        (layer "F.Fab")
+        (uuid "4069ab0e-e5a4-4c13-851d-c62cd37e6cf9")
+    )
+    (fp_line
+        (start -3.31 1)
+        (end -3.31 -6.5)
+        (stroke
+            (width 0.1)
+            (type solid)
+        )
+        (layer "F.Fab")
+        (uuid "e783941e-079c-497f-b9f1-19f17e13f035")
+    )
+    (fp_line
+        (start -2.31 2)
+        (end -3.31 1)
+        (stroke
+            (width 0.1)
+            (type solid)
+        )
+        (layer "F.Fab")
+        (uuid "d299dd32-948c-4dc9-b5fc-b86c2f4f8903")
+    )
+    (fp_line
+        (start 8.29 -6.5)
+        (end 8.29 2)
+        (stroke
+            (width 0.1)
+            (type solid)
+        )
+        (layer "F.Fab")
+        (uuid "56bbd4c9-cf20-467f-bd21-6f2b5cfc1c05")
+    )
+    (fp_line
+        (start 8.29 2)
+        (end -2.31 2)
+        (stroke
+            (width 0.1)
+            (type solid)
+        )
+        (layer "F.Fab")
+        (uuid "408c1dda-eb97-4cd0-90a9-9823ee9ef335")
+    )
+    (fp_text user "${REFERENCE}"
+        (at 2.54 -2.25 0)
+        (layer "F.Fab")
+        (effects
+            (font
+                (size 1 1)
+                (thickness 0.15)
+            )
+        )
+        (uuid "d21a3766-2ead-43d4-890d-0b2d7e1b9e37")
+    )
+    (pad "1" thru_hole rect
+        (at 0 0 180)
+        (size 1.5 2.3)
+        (drill 1)
+        (layers "*.Cu" "*.Mask")
+        (remove_unused_layers no)
+        (net "+12V")
+        (pinfunction "IN_1")
+        (pintype "power_in")
+        (uuid "08bbec7d-4289-4917-aee8-d42ab1c9349c")
+    )
+    (pad "2" thru_hole oval
+        (at 2.54 0 180)
+        (size 1.5 2.3)
+        (drill 1)
+        (layers "*.Cu" "*.Mask")
+        (remove_unused_layers no)
+        (net "GND")
+        (pinfunction "GND_2")
+        (pintype "power_in")
+        (uuid "705e2959-0df9-49ee-8d43-f7e8a71e0cdf")
+    )
+    (pad "3" thru_hole oval
+        (at 5.08 0 180)
+        (size 1.5 2.3)
+        (drill 1)
+        (layers "*.Cu" "*.Mask")
+        (remove_unused_layers no)
+        (net "+5V")
+        (pinfunction "OUT_3")
+        (pintype "power_out")
+        (uuid "05b3aaa6-f45b-45d8-ad88-0747b1e6dad4")
+    )
+    (embedded_fonts no)
+    (model "${KICAD10_3DMODEL_DIR}/Converter_DCDC.3dshapes/Converter_DCDC_RECOM_R-78E-0.5_THT.step"
+        (offset
+            (xyz 0 0 0)
+        )
+        (scale
+            (xyz 1 1 1)
+        )
+        (rotate
+            (xyz 0 0 0)
+        )
+    )
+)
 	(footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 		(layer "F.Cu")
 		(uuid "6b97a7a0-c5b4-40b4-9ca4-b908e92c5c7e")

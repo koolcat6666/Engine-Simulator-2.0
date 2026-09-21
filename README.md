@@ -103,7 +103,7 @@ Engine Simulator 2.0/
 | ESP32-WROOM-32U | 1 | Microcontroller principale |
 | 74AHCT125 | 4 | Level shifter 3.3V -> 5V (Crank, Cam1, Cam2) |
 | TLV2372 | 3 | Op-amp rail-to-rail (buffer MAP, CLT DAC) |
-| L7805 | 1 | Regolatore lineare 12V -> 5V |
+| R-78E5.0-1.0 (RECOM) | 1 | Regolatore switching drop-in 12V -> 5V, 1A, 91% |
 | Connettore IDC 40-pin | 1 | Connessione a Speeduino V0.4 |
 | LED | 14 | Monitoraggio uscite ECU |
 | Potenziometri trimmer | 3 | TPS, IAT, O2 (manuale) |
@@ -115,7 +115,7 @@ Engine Simulator 2.0/
 | Segmento | Tensione | Metodo |
 |:---------|:--------:|:-------|
 | Alimentazione board | 12V | Jack DC esterno |
-| Alimentazione logica | 5V | L7805 da 12V |
+| Alimentazione logica | 5V | R-78E5.0-1.0 (switching, drop-in) da 12V |
 | ESP32 e sensori | 3.3V | Regolatore onboard ESP32 |
 | Uscite digitali ESP32 -> ECU | 3.3V -> 5V | 74AHCT125 |
 | Uscite analogiche ESP32 -> ECU | 0-3.3V -> 0-5V | TLV2372 (guadagno 1.5x) |
