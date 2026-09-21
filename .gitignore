@@ -42,3 +42,6 @@ arduino-cli.yaml
 # Temporary
 *.log
 *.tmp
+
+# Sessioni chat / tooling locale (non pubblicare)
+sessions/

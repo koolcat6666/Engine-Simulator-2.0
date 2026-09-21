@@ -94,19 +94,19 @@ Di seguito la mappatura dei pin IDC collegati all'ESP32 sul PCB del simulatore:
 | 21 | O2 | **Ingresso ECU** | Potenziometro manuale | Regolatore esterno, collegato direttamente a Speeduino |
 | 25 | Crank | **Uscita ECU** (input per Speeduino) | GPIO 12 via level shifter 3.3V->5V | Segnale generato da ESP32 |
 | 24 | Cam | **Uscita ECU** (input per Speeduino) | GPIO 13 via level shifter 3.3V->5V | Segnale generato da ESP32 |
-| 15 | Fan | **Uscita ECU** | GPIO 27 via partitore 5V->3.3V | Lettura stato ventola da Speeduino |
-| 1 | Injector 1 | **Uscita ECU** | LED di stato | Monitoraggio visivo |
-| 2 | Injector 2 | **Uscita ECU** | LED di stato | Monitoraggio visivo |
-| 3 | Injector 3 | **Uscita ECU** | LED di stato | Monitoraggio visivo |
-| 5 | Injector 4 | **Uscita ECU** | LED di stato | Monitoraggio visivo |
-| 7 | Ignition 1 | **Uscita ECU** | LED di stato | Monitoraggio visivo |
-| 8 | Ignition 4 | **Uscita ECU** | LED di stato | Monitoraggio visivo |
-| 33 | Ignition 3 | **Uscita ECU** | LED di stato | Monitoraggio visivo |
-| 34 | Ignition 2 | **Uscita ECU** | LED di stato | Monitoraggio visivo |
-| 37 | Idle (PWM) | **Uscita ECU** | LED di stato | Monitoraggio visivo |
-| 35 | Boost | **Uscita ECU** | LED di stato | Monitoraggio visivo |
-| 38 | VVT | **Uscita ECU** | LED di stato | Monitoraggio visivo |
-| 16 | Fuel Pump | **Uscita ECU** | LED di stato | Monitoraggio visivo |
+| 15 | Fan | **Uscita ECU** | CD4050-A out 6 -> GPIO 27 | Lettura stato ventola (temperatura CLT) |
+| 1 | Injector 1 | **Uscita ECU** | CD4050-B out 4 -> GPIO 15 | Input capture timing (FASE 2) |
+| 2 | Injector 2 | **Uscita ECU** | CD4050-B out 6 -> GPIO 16 | Input capture timing (FASE 2) |
+| 3 | Injector 3 | **Uscita ECU** | CD4050-B out 10 -> GPIO 17 | Input capture timing (FASE 2) |
+| 5 | Injector 4 | **Uscita ECU** | CD4050-B out 12 -> GPIO 18 | Input capture timing (FASE 2) |
+| 7 | Ignition 1 | **Uscita ECU** | CD4050-A out 10 -> GPIO 19 | Input capture timing (FASE 2) |
+| 8 | Ignition 4 | **Uscita ECU** | CD4050-A out 2 -> GPIO 23 | Input capture timing (FASE 2) |
+| 33 | Ignition 3 | **Uscita ECU** | CD4050-A out 15 -> GPIO 22 | Input capture timing (FASE 2) |
+| 34 | Ignition 2 | **Uscita ECU** | CD4050-A out 12 -> GPIO 21 | Input capture timing (FASE 2) |
+| 37 | Idle (PWM) | **Uscita ECU** | Non monitorata | (Monitorabile in futuro) |
+| 35 | Boost | **Uscita ECU** | Non monitorata | (Monitorabile in futuro) |
+| 38 | VVT | **Uscita ECU** | Non monitorata | (Monitorabile in futuro) |
+| 16 | Fuel Pump | **Uscita ECU** | Non monitorata | (Monitorabile in futuro) |
 
 ---
 

@@ -29,17 +29,9 @@ Il sistema si collega alla centralina tramite il connettore IDC 40-pin standard 
 |:--------|:---------:|:------------:|:-----|
 | Fan Feedback | GPIO 27 | IDC Pin 15 | Stato ventola (0V = accesa), partitore 5V->3.3V |
 
-### LED di Monitoraggio Uscite ECU
+### Monitoraggio uscite ECU
 
-| LED | Uscita Speeduino | Funzione |
-|:----|:----------------:|:---------|
-| D1-D4 | IDC Pin 1,2,3,5 | Iniettori 1-4 |
-| D5-D8 | IDC Pin 7,8,33,34 | Candele (Ignition 1-4) |
-| D9 | IDC Pin 15 | Ventola raffreddamento |
-| D10 | IDC Pin 37 | Valvola del minimo (Idle) |
-| D11 | IDC Pin 38 | VVT |
-| D12 | IDC Pin 35 | Boost |
-| D13 | IDC Pin 16 | Pompa carburante |
+Le uscite Speeduino (iniettori, candele, ventola, idle, VVT, boost, pompa carburante) vengono lette dall'ESP32 tramite buffer CD4050BE per il calcolo del timing (FASE 2).
 
 ---
 
@@ -105,7 +97,7 @@ Engine Simulator 2.0/
 | TLV2372 | 3 | Op-amp rail-to-rail (buffer MAP, CLT DAC) |
 | R-78E5.0-1.0 (RECOM) | 1 | Regolatore switching drop-in 12V -> 5V, 1A, 91% |
 | Connettore IDC 40-pin | 1 | Connessione a Speeduino V0.4 |
-| LED | 14 | Monitoraggio uscite ECU |
+| CD4050BE | 2 | Hex buffer per ingressi ECU (iniettori/candele/ventola) |
 | Potenziometri trimmer | 3 | TPS, IAT, O2 (manuale) |
 | Pulsante | 1 | Start/Stop |
 | Jack DC | 1 | Alimentazione 12V |
@@ -120,40 +112,6 @@ Engine Simulator 2.0/
 | Uscite digitali ESP32 -> ECU | 3.3V -> 5V | 74AHCT125 |
 | Uscite analogiche ESP32 -> ECU | 0-3.3V -> 0-5V | TLV2372 (guadagno 1.5x) |
 | Ingresso Fan da ECU | 5V -> 3.3V | Partitore resistivo |
-
----
-
-## Lavorare su due PC (sync sessioni chat opencode)
-
-Per continuare la stessa conversazione opencode su due PC (uno alla volta), le sessioni si esportano come JSON nel repo e si reimportano sull'altro PC.
-
-### Prerequisito (una tantum, su entrambi i PC)
-
-```powershell
-winget install SST.opencode
-```
-
-### Trasferimento dal PC-A (quello su cui hai lavorato)
-
-```powershell
-.\export-chat.ps1               # scegli la sessione, verra' salvata in sessions/
-git add sessions
-git commit -m "chat: export sessione"
-git push
-```
-
-### Ripresa sul PC-B
-
-```powershell
-git pull
-.\import-chat.ps1 sessions\<file>.json
-```
-
-Poi apri opencode e riprendi la sessione con `/sessions` (o `opencode --continue`).
-
-> Le sessioni esportate restano nel repo come JSON in `sessions/`. Non sincronizzare
-> il database `~/.local/share/opencode/opencode.db` tra PC: e' un file binario che
-> si corrompe facilmente se sincronizzato a mano.
 
 ---
 
