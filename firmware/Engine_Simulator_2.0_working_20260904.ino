@@ -12,8 +12,6 @@
  *   - TPS: Potenziometro esterno, collegato a Speeduino + partitore verso ESP32 ADC
  *   - IAT: Potenziometro esterno, collegato direttamente a Speeduino
  *   - O2:  Potenziometro esterno, collegato direttamente a Speeduino
- *
- * LED di stato: Monitorano le uscite della ECU (iniettori, candele, ventola, idle, VVT, boost)
  */
 
 #include <Arduino.h>
