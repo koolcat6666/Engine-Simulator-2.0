@@ -5,7 +5,7 @@
       "Application": "Pcbnew",
       "Version": "10.0.4"
     },
-    "CreationDate": "2026-09-21T13:39:24+02:00"
+    "CreationDate": "2026-10-06T10:17:39+02:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -26,7 +26,7 @@
       "Layers": "Outer",
       "PadToPad": 0.2,
       "PadToTrack": 0.2,
-      "TrackToTrack": -0.0,
+      "TrackToTrack": 0.2,
       "MinLineWidth": 0.2,
       "TrackToRegion": 0.5,
       "RegionToRegion": 0.5
@@ -41,16 +41,6 @@
     {
       "Path": "Engine Simulator 2.0-B_Cu.gbl",
       "FileFunction": "Copper,L2,Bot",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "Engine Simulator 2.0-F_Adhesive.gta",
-      "FileFunction": "Glue,Top",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "Engine Simulator 2.0-B_Adhesive.gba",
-      "FileFunction": "Glue,Bot",
       "FilePolarity": "Positive"
     },
     {
@@ -84,22 +74,7 @@
       "FilePolarity": "Negative"
     },
     {
-      "Path": "Engine Simulator 2.0-User_Drawings.gbr",
-      "FileFunction": "Other,User",
-      "FilePolarity": "Positive"
-    },
-    {
       "Path": "Engine Simulator 2.0-User_Comments.gbr",
-      "FileFunction": "Other,User",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "Engine Simulator 2.0-User_Eco1.gbr",
-      "FileFunction": "Other,User",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "Engine Simulator 2.0-User_Eco2.gbr",
       "FileFunction": "Other,User",
       "FilePolarity": "Positive"
     },
@@ -116,26 +91,6 @@
     {
       "Path": "Engine Simulator 2.0-B_Fab.gbr",
       "FileFunction": "AssemblyDrawing,Bot",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "Engine Simulator 2.0-User_1.gbr",
-      "FileFunction": "Other,User",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "Engine Simulator 2.0-User_2.gbr",
-      "FileFunction": "Other,User",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "Engine Simulator 2.0-User_3.gbr",
-      "FileFunction": "Other,User",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "Engine Simulator 2.0-User_4.gbr",
-      "FileFunction": "Other,User",
       "FilePolarity": "Positive"
     }
   ],
