@@ -8,13 +8,13 @@ L'ESP32U si distingue per la presenza del connettore U.FL per l'antenna esterna,
 
 ## Signal Architecture
 
-L'ESP32 si occupa esclusivamente di:
-- **Generare** i segnali di ruota fonica (Crank, Cam1, Cam2)
-- **Generare** le tensioni analogiche per MAP e CLT verso Speeduino
-- **Leggere** il TPS (per controllare gli RPM) e lo stato della ventola
-- **Gestire** il pulsante Start/Stop
+The ESP32 is responsible for:
+- **Generating** i segnali di ruota fonica (Crank, Cam1, Cam2)
+- **Generating** le tensioni analogiche per MAP e CLT verso Speeduino
+- **Reading** il TPS (per controllare gli RPM) e lo stato della ventola
+- **Managing** il pulsante Start/Stop
 
-I segnali IAT e O2 sono gestiti **manualmente** tramite potenziometri collegati direttamente a Speeduino, senza intervento dell'ESP32.
+IAT and O2 signals are **manualmente** tramite potenziometri collegati direttamente a Speeduino, senza intervento dell'ESP32.
 
 ---
 
