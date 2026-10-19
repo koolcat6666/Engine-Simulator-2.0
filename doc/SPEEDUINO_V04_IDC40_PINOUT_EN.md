@@ -1,11 +1,11 @@
 # Speeduino V0.4 - IDC 40-Pin Connector Pinout
 
-Pinout ufficiale del connettore IDC 40 pin della **Speeduino V0.4**.  
-Riferimento: [Speeduino Wiki - V04 Board](https://wiki.speeduino.com/en/boards/V04)
+Official pinout of the **Speeduino V0.4** 40-pin IDC connector.
+Reference: [Speeduino Wiki - V04 Board](https://wiki.speeduino.com/en/boards/V04)
 
 ## IDC 40-Pin Pinout Table (Speeduino V0.4)
 
-| Pin IDC | Funzione |
+| IDC Pin | Function |
 |:-------:|:---------|
 | 1 | Injector 1 - Pin 1/2 |
 | 2 | Injector 2 - Pin 1/2 |
@@ -15,7 +15,7 @@ Riferimento: [Speeduino Wiki - V04 Board](https://wiki.speeduino.com/en/boards/V
 | 6 | Injector 4 - Pin 2/2 |
 | 7 | Ignition 1 |
 | 8 | Ignition 4 |
-| 9 | Ground (Sensori) |
+| 9 | Ground (Sensors) |
 | 10 | Ground |
 | 11 | MAP Sensor (0-5V) |
 | 12 | Ground |
@@ -32,8 +32,8 @@ Riferimento: [Speeduino Wiki - V04 Board](https://wiki.speeduino.com/en/boards/V
 | 23 | Ground |
 | 24 | Cam Input / VR2+ |
 | 25 | Crank Input / VR1+ |
-| 26 | VR2- (non usato per sensori Hall) |
-| 27 | VR1- (non usato per sensori Hall) |
+| 26 | VR2- (not used with Hall sensors) |
+| 27 | VR1- (not used with Hall sensors) |
 | 28 | +5V |
 | 29 | Stepper Motor 2B |
 | 30 | Stepper Motor 2A |
@@ -52,77 +52,77 @@ Riferimento: [Speeduino Wiki - V04 Board](https://wiki.speeduino.com/en/boards/V
 
 ## Default Output Functions (v0.4.4b+)
 
-| Funzione | Pin IDC | Arduino Pin | Note |
-|:---------|:-------:|:-----------:|:-----|
-| Boost Control | 35 | 7 | Disabilitare in TunerStudio e rimappare a Pin 4 |
-| VVT | 38 | 4 | Disabilitare in TunerStudio |
+| Function | IDC Pin | Arduino Pin | Notes |
+|:---------|:-------:|:-----------:|:------|
+| Boost Control | 35 | 7 | Disable in TunerStudio and remap to Pin 4 |
+| VVT | 38 | 4 | Disable in TunerStudio |
 | Idle 1 (PWM) | 37 | 5 | |
 | Idle 2 (3-wire) | 36 | 6 | |
-| Fuel Pump | 16 | 45 | Jumper da proto area |
-| Fan | 15 | 47 | Jumper da proto area |
-| Tachometer | 17 | 49 | Jumper da proto area |
-| Launch/Clutch | 18 | 51 | Jumper da proto area |
+| Fuel Pump | 16 | 45 | Jumper from proto area |
+| Fan | 15 | 47 | Jumper from proto area |
+| Tachometer | 17 | 49 | Jumper from proto area |
+| Launch/Clutch | 18 | 51 | Jumper from proto area |
 
 ---
 
-## Sensori di Input (Pezzo 0.4)
+## Input Sensors (Board 0.4)
 
-| Funzione | Arduino Pin | Descrizione |
+| Function | Arduino Pin | Description |
 |:---------|:-----------:|:------------|
-| Crank Trigger | 19 | Sensore CKP (VR o Hall) |
-| Cam Trigger | 18 | Sensore CMP (VR o Hall) |
-| Cam 2 / VVT2 | 3 | Secondo sensore fase |
+| Crank Trigger | 19 | CKP sensor (VR or Hall) |
+| Cam Trigger | 18 | CMP sensor (VR or Hall) |
+| Cam 2 / VVT2 | 3 | Second phase sensor |
 | TPS | A2 | Throttle Position Sensor |
-| MAP | A3 | MAP Sensor (integrato sulla board) |
+| MAP | A3 | MAP Sensor (onboard) |
 | IAT | A0 | Intake Air Temperature |
 | CLT | A1 | Coolant Temperature |
-| O2 | A8 | Sonda Lambda |
-| Battery | A4 | Riferimento tensione batteria |
+| O2 | A8 | Oxygen (Lambda) sensor |
+| Battery | A4 | Battery voltage reference |
 
 ---
 
-## Collegamenti verso Engine Simulator 2.0 (ESP32)
+## Connections to Engine Simulator 2.0 (ESP32)
 
-Di seguito la mappatura dei pin IDC collegati all'ESP32 sul PCB del simulatore:
+Mapping of the IDC pins wired to the ESP32 on the simulator PCB:
 
-| Pin IDC | Funzione Speeduino | Direzione (per ECU) | Collegamento ESP32 | Note Hardware |
-|:-------:|:------------------:|:-------------------:|:------------------:|:--------------|
-| 11 | MAP | **Ingresso ECU** | DAC1 (GPIO 25) via op-amp | Generato da ESP32 (0-3.3V amplificato a 0-5V) |
-| 19 | CLT | **Ingresso ECU** | DAC2 (GPIO 26) via op-amp | Generato da ESP32 (0-3.3V amplificato a 0-5V) |
-| 20 | IAT | **Ingresso ECU** | Potenziometro manuale | Regolatore esterno, collegato direttamente a Speeduino |
-| 22 | TPS | **Ingresso ECU** | Potenziometro con partitore | Regolatore esterno, collegato a Speeduino + partitore verso ESP32 ADC (GPIO 34) |
-| 21 | O2 | **Ingresso ECU** | Potenziometro manuale | Regolatore esterno, collegato direttamente a Speeduino |
-| 25 | Crank | **Uscita ECU** (input per Speeduino) | GPIO 12 via level shifter 3.3V->5V | Segnale generato da ESP32 |
-| 24 | Cam | **Uscita ECU** (input per Speeduino) | GPIO 13 via level shifter 3.3V->5V | Segnale generato da ESP32 |
-| 15 | Fan | **Uscita ECU** | CD4050-A out 6 -> GPIO 27 | Lettura stato ventola (temperatura CLT) |
-| 1 | Injector 1 | **Uscita ECU** | CD4050-B out 4 -> GPIO 15 | Input capture timing (FASE 2) |
-| 2 | Injector 2 | **Uscita ECU** | CD4050-B out 6 -> GPIO 16 | Input capture timing (FASE 2) |
-| 3 | Injector 3 | **Uscita ECU** | CD4050-B out 10 -> GPIO 17 | Input capture timing (FASE 2) |
-| 5 | Injector 4 | **Uscita ECU** | CD4050-B out 12 -> GPIO 18 | Input capture timing (FASE 2) |
-| 7 | Ignition 1 | **Uscita ECU** | CD4050-A out 10 -> GPIO 19 | Input capture timing (FASE 2) |
-| 8 | Ignition 4 | **Uscita ECU** | CD4050-A out 2 -> GPIO 23 | Input capture timing (FASE 2) |
-| 33 | Ignition 3 | **Uscita ECU** | CD4050-A out 15 -> GPIO 22 | Input capture timing (FASE 2) |
-| 34 | Ignition 2 | **Uscita ECU** | CD4050-A out 12 -> GPIO 21 | Input capture timing (FASE 2) |
-| 37 | Idle (PWM) | **Uscita ECU** | Non monitorata | (Monitorabile in futuro) |
-| 35 | Boost | **Uscita ECU** | Non monitorata | (Monitorabile in futuro) |
-| 38 | VVT | **Uscita ECU** | Non monitorata | (Monitorabile in futuro) |
-| 16 | Fuel Pump | **Uscita ECU** | Non monitorata | (Monitorabile in futuro) |
+| IDC Pin | Speeduino Function | Direction (for the ECU) | ESP32 Connection | Hardware Notes |
+|:-------:|:------------------:|:-----------------------:|:-----------------|:---------------|
+| 11 | MAP | **ECU input** | DAC1 (GPIO 25) via op-amp | Generated by the ESP32 (0-3.3V amplified to 0-5V) |
+| 19 | CLT | **ECU input** | DAC2 (GPIO 26) via op-amp | Generated by the ESP32 (0-3.3V amplified to 0-5V) |
+| 20 | IAT | **ECU input** | Manual potentiometer | External trimmer, wired directly to Speeduino |
+| 22 | TPS | **ECU input** | Potentiometer with divider | External trimmer, wired to Speeduino + divider to ESP32 ADC (GPIO 34) |
+| 21 | O2 | **ECU input** | Manual potentiometer | External trimmer, wired directly to Speeduino |
+| 25 | Crank | **ECU output** (input for Speeduino) | GPIO 12 via 3.3V->5V level shifter | Signal generated by the ESP32 |
+| 24 | Cam | **ECU output** (input for Speeduino) | GPIO 13 via 3.3V->5V level shifter | Signal generated by the ESP32 |
+| 15 | Fan | **ECU output** | CD4050-A out 6 -> GPIO 27 | Reads the fan state (for CLT temperature) |
+| 1 | Injector 1 | **ECU output** | CD4050-B out 4 -> GPIO 15 | Input capture timing (Phase 2) |
+| 2 | Injector 2 | **ECU output** | CD4050-B out 6 -> GPIO 16 | Input capture timing (Phase 2) |
+| 3 | Injector 3 | **ECU output** | CD4050-B out 10 -> GPIO 17 | Input capture timing (Phase 2) |
+| 5 | Injector 4 | **ECU output** | CD4050-B out 12 -> GPIO 18 | Input capture timing (Phase 2) |
+| 7 | Ignition 1 | **ECU output** | CD4050-A out 10 -> GPIO 19 | Input capture timing (Phase 2) |
+| 8 | Ignition 4 | **ECU output** | CD4050-A out 2 -> GPIO 23 | Input capture timing (Phase 2) |
+| 33 | Ignition 3 | **ECU output** | CD4050-A out 15 -> GPIO 22 | Input capture timing (Phase 2) |
+| 34 | Ignition 2 | **ECU output** | CD4050-A out 12 -> GPIO 21 | Input capture timing (Phase 2) |
+| 37 | Idle (PWM) | **ECU output** | Not monitored | (Can be monitored in the future) |
+| 35 | Boost | **ECU output** | Not monitored | (Can be monitored in the future) |
+| 38 | VVT | **ECU output** | Not monitored | (Can be monitored in the future) |
+| 16 | Fuel Pump | **ECU output** | Not monitored | (Can be monitored in the future) |
 
 ---
 
-## Note sui Livelli di Tensione
+## Voltage Level Notes
 
-### Uscite ESP32 -> Speeduino (3.3V -> 5V)
-I segnali digitali generati dall'ESP32 (Crank, Cam1) sono a logica 3.3V. Devono essere traslati a 5V tramite **74AHCT125** (level shifter) prima di essere inviati ai pin Crank/Cam dell'IDC.
+### ESP32 -> Speeduino Outputs (3.3V -> 5V)
+The digital signals generated by the ESP32 (Crank, Cam1) use 3.3V logic. They must be shifted to 5V through the **74AHCT125** (level shifter) before reaching the IDC Crank/Cam pins.
 
-### Uscite Analogiche ESP32 -> Speeduino
-I DAC dell'ESP32 (GPIO 25, 26) erogano 0-3.3V. Vanno amplificati a 0-5V tramite **op-amp rail-to-rail** (TLV2372) con guadagno ~1.5x per compatibilita' con gli ingressi analogici di Speeduino (MAP e CLT).
+### ESP32 -> Speeduino Analog Outputs
+The ESP32 DACs (GPIO 25, 26) output 0-3.3V. They are amplified to 0-5V by a **rail-to-rail op-amp** (TLV2372) with a gain of ~1.5x to match the Speeduino analog inputs (MAP and CLT).
 
-### Ingressi da Speeduino -> ESP32 (5V -> 3.3V)
-Il segnale Fan (pin 15 IDC) e' a 5V. Deve essere ridotto a 3.3V tramite partitore resistivo prima di essere letto dal GPIO 27 dell'ESP32.
+### Speeduino -> ESP32 Inputs (5V -> 3.3V)
+The Fan signal (IDC pin 15) is 5V. It must be divided down to 3.3V through a resistive divider before being read by ESP32 GPIO 27.
 
-### Potenziometri TPS/IAT/O2
-I potenziometri sono alimentati a 5V (condiviso con Speeduino). Il cursore va collegato:
-- **TPS**: a Speeduino (pin 22 IDC) + partitore resistivo 10k/20k verso GPIO 34 ESP32
-- **IAT**: direttamente a Speeduino (pin 20 IDC), nessun collegamento ESP32
-- **O2**: direttamente a Speeduino (pin 21 IDC), nessun collegamento ESP32
+### TPS/IAT/O2 Potentiometers
+The potentiometers are powered at 5V (shared with Speeduino). The wiper must be connected:
+- **TPS**: to Speeduino (IDC pin 22) + 10k/20k resistive divider to ESP32 GPIO 34
+- **IAT**: directly to Speeduino (IDC pin 20), no ESP32 connection
+- **O2**: directly to Speeduino (IDC pin 21), no ESP32 connection

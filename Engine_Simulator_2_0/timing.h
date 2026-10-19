@@ -40,4 +40,11 @@ void timingSetup();
 void timingUpdate();      // calcola valori finali dai timestamp grezzi (chiamare nel loop)
 void timingTest(bool on); // autotest: genera PWM noti su GPIO32/33 (jumper verso INJ1/IGN1)
 
+// --- RILEVAMENTO ATTIVITA' ECU (usato dalla logica di avvio SYNC_ACTIVE) ---
+// Ritornano true se un fronte di iniezione/accensione e' stato rilevato negli
+// ultimi windowMs millisecondi (marcatori lastInjEventUs/lastIgnEventUs, globals.h).
+bool hasRecentInjection(uint32_t windowMs);
+bool hasRecentIgnition(uint32_t windowMs);
+bool hasRecentFiring(uint32_t windowMs);  // true solo se iniezione E accensione recenti
+
 #endif

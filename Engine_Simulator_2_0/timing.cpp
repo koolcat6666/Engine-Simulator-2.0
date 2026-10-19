@@ -51,10 +51,15 @@ volatile uint32_t lastCrankEdgeUs = 0;
 // Inizio del pattern (edge_counter==0): riferimento angolare del ciclo
 volatile uint32_t revStartUs = 0;
 
+// Timestamp dell'ultimo fronte di iniezione/accensione: marcatori di attivita' ECU
+volatile uint32_t lastInjEventUs = 0;
+volatile uint32_t lastIgnEventUs = 0;
+
 // --- ISR INIETTORI (attivo basso: DISCESA = apertura, SALITA = chiusura) ---
 #define MAKE_INJ_ISR(i)                                                                \
 void IRAM_ATTR injISR##i() {                                                           \
   uint32_t now = micros();                                                             \
+  lastInjEventUs = now;                                                                \
   if (GPIO.in & (1ULL << injPin[i])) {  /* SALITA: fine apertura */                   \
     injRawData[i].onTimeUs = now - injRawData[i].lastStartUs;                          \
     injRawData[i].periodUs = now - injRawData[i].lastRiseUs;                           \
@@ -73,6 +78,7 @@ MAKE_INJ_ISR(3)
 #define MAKE_IGN_ISR(i)                                                                \
 void IRAM_ATTR ignISR##i() {                                                           \
   uint32_t now = micros();                                                             \
+  lastIgnEventUs = now;                                                                \
   if (GPIO.in & (1ULL << ignPin[i])) {  /* SALITA: fine spark */                      \
     ignRawData[i].dwellUs = now - ignRawData[i].sparkStartUs;                          \
     ignRawData[i].periodUs = now - ignRawData[i].lastRsUs;                             \
@@ -195,4 +201,18 @@ void timingUpdate() {
       ignitions[i].advanceDeg = 0;
     }
   }
+}
+
+// --- RILEVAMENTO ATTIVITA' ECU ---
+// Un marcatore e' "recente" se il suo ultimo fronte e' avvenuto entro windowMs.
+// La sottrazione unsigned su micros() e' wrap-safe sull'intero range 32 bit
+// (71 minuti), ampiamente sufficiente rispetto alle finestre usate (centinaia di ms).
+static bool recentEvent(volatile uint32_t &lastUs, uint32_t windowMs) {
+  return (uint32_t)(micros() - lastUs) < (windowMs * 1000UL);
+}
+
+bool hasRecentInjection(uint32_t windowMs) { return recentEvent(lastInjEventUs, windowMs); }
+bool hasRecentIgnition(uint32_t windowMs)  { return recentEvent(lastIgnEventUs, windowMs); }
+bool hasRecentFiring(uint32_t windowMs) {
+  return hasRecentInjection(windowMs) && hasRecentIgnition(windowMs);
 }

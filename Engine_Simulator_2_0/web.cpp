@@ -393,12 +393,18 @@ nav a{color:var(--acc);text-decoration:none;font-size:.82rem;font-weight:600}
     Indice: <b><span id="cur-idx"></span></b> / N&deg; max: <b>)SH");
   page += String(MAX_WHEELS);
   page += String(R"SH(</b></div>
-    <button onclick="saveWheel()" type="button">Salva e applica ruota</button>
+    <h2>Sync Mode</h2>
+    <select id="sync-select">
+      <option value="0">Passive</option>
+      <option value="1">Active</option>
+    </select>
+    <button onclick="saveWheel()" type="button">Salva e applica</button>
     <div id="save-msg"></div>
   </div>
 </div>
 <script>
 const sel = document.getElementById('wheel-select');
+const syncSel = document.getElementById('sync-select');
 const nm = () => sel.options[sel.selectedIndex].text;
 function upd(){
   document.getElementById('cur-name').textContent = nm();
@@ -406,6 +412,8 @@ function upd(){
 }
 sel.addEventListener('change', upd);
 upd();
+// Carica la modalita' di sync corrente
+fetch('/api/sync').then(r=>r.json()).then(d=>{ syncSel.value = d.syncMode; }).catch(()=>{});
 async function saveWheel(){
   const msg = document.getElementById('save-msg');
   msg.textContent = '...';
@@ -414,7 +422,8 @@ async function saveWheel(){
     const d = await r.json();
     if(d.ok){
       const chk = await (await fetch('/api/wheel?get=1')).json();
-      msg.textContent = 'Ruota salvata! attiva='+sel.options[chk.wheel].text+' (idx '+chk.wheel+')';
+      await fetch('/api/sync?mode='+syncSel.value);
+      msg.textContent = 'Salvato! ruota='+sel.options[chk.wheel].text+' (idx '+chk.wheel+'), sync='+syncSel.options[syncSel.selectedIndex].text;
       sel.value = chk.wheel;
     } else {
       msg.textContent = 'Errore: '+d.error;
@@ -443,6 +452,11 @@ void webSetup() {
     display_new_wheel();
   }
 
+  // Carica la modalita' di sync salvata su NVS (default: SYNC_PASSIVE).
+  uint8_t syncSaved = prefs.getUChar(NVS_KEY_SYNC, SYNC_PASSIVE);
+  if (syncSaved > 1) syncSaved = SYNC_PASSIVE;
+  config.syncMode = syncSaved;
+
   // AVVIO ACCESS POINT (IP statico + DHCP per i client)
   WiFi.mode(WIFI_AP);
   IPAddress localIP(AP_IP);
@@ -465,6 +479,18 @@ void webSetup() {
     request->send(200, "application/json", on ? "{\"ok\":true,\"test\":1}" : "{\"ok\":true,\"test\":0}");
   });
 
+  // --- Sync mode ---
+  server.on("/api/sync", HTTP_GET, [](AsyncWebServerRequest *request){
+    if(request->hasParam("mode")){
+      int m = request->getParam("mode")->value().toInt();
+      if(m != 0 && m != 1) m = 0;
+      config.syncMode = (uint8_t)m;
+      prefs.putUChar(NVS_KEY_SYNC, config.syncMode);
+    }
+    char b[40];
+    snprintf(b, sizeof(b), "{\"ok\":true,\"syncMode\":%d}", config.syncMode);
+    request->send(200, "application/json", b);
+  });
   // --- SETUP ruota fonica ---
   server.on("/setup", HTTP_GET, [](AsyncWebServerRequest *request) {
     AsyncWebServerResponse *resp = request->beginResponse(200, "text/html", setupHtml());
@@ -502,10 +528,10 @@ void webSetup() {
     int n = 0;
     n += snprintf(buf + n, sizeof(buf) - n,
       "{\"rpm\":%u,\"state\":\"%s\",\"tps_pct\":%.1f,\"map_kpa\":%.1f,\"clt_c\":%.1f,"
-      "\"fan\":%s,\"clients\":%u,\"wheel\":%u,\"wheel_name\":\"%s\","
+      "\"fan\":%s,\"clients\":%u,\"syncMode\":%d,\"wheel\":%u,\"wheel_name\":\"%s\","
       "\"inj\":[",
       currentStatus.rpm, engineStateName(), tpsValue*100.0f, currentMapKpa, engineTemp,
-      fanActive ? "true" : "false", connectedClients, config.wheel, wname.c_str());
+      fanActive ? "true" : "false", connectedClients, config.syncMode, config.wheel, wname.c_str());
 
     for (uint8_t i = 0; i < 4; i++) {
       n += snprintf(buf + n, sizeof(buf) - n,

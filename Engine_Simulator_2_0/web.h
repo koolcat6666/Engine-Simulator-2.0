@@ -25,6 +25,7 @@
 // --- CHIAVE NVS PER LA RUOTA FONICA ---
 #define NVS_NAMESPACE "engsim"
 #define NVS_KEY_WHEEL "wheel"
+#define NVS_KEY_SYNC  "syncMode"
 
 void webSetup();
 void webLoop();

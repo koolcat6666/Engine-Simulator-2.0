@@ -112,6 +112,7 @@ wheels Wheels[MAX_WHEELS] = {
 // --- VARIABILI DI STATO MOTORE ---
 // enum MotorState definito in globals.h
 MotorState engineState = ENGINE_OFF;
+uint32_t crankStartMs = 0; // istante (millis) di inizio cranking, per il timeout SYNC_ACTIVE
 
 float currentRpmFloat = 0.0;
 float tpsValue = 0.0; // Apertura TPS normalizzata 0.0 - 1.0
@@ -216,6 +217,7 @@ void setup() {
   config.compressionRPM = 400;
   config.compressionOffset = 0;
   config.compressionDynamic = false;
+  config.syncMode = SYNC_PASSIVE;
 
   currentStatus.base_rpm = 0;
   currentStatus.compressionModifier = 0;
@@ -300,15 +302,40 @@ void loop() {
       case ENGINE_OFF:
         targetRpm = 0;
         currentRpmFloat = 0;
+        crankStartMs = 0;
         break;
         
       case ENGINE_CRANKING:
-        // Cranking accelera da 0 a 350 RPM
-        if (currentRpmFloat < 350.0) {
-          currentRpmFloat += 2.0; // Rampa di cranking
-        } else {
-          // Motore si avvia
-          engineState = ENGINE_RUNNING;
+        {
+          // Marca l'inizio del cranking (azzerato all'uscita da CRANKING/OFF)
+          if (crankStartMs == 0) crankStartMs = now;
+          const float minCrankForSync = 250.0;  // RPM minimi per considerare la sync
+          const uint32_t fireWindowMs = 400;    // finestra attivita' ECU
+          const uint32_t maxCrankMs = 10000;    // timeout cranking in SYNC_ACTIVE
+
+          if (config.syncMode == SYNC_PASSIVE) {
+            // Avvio autonomo: rampa fino a 350 RPM, poi RUNNING
+            if (currentRpmFloat < 350.0) {
+              currentRpmFloat += 2.0;
+            } else {
+              engineState = ENGINE_RUNNING;
+              crankStartMs = 0;
+            }
+          } else { // SYNC_ACTIVE: avvio solo con iniezione+accensione dalla ECU
+            if (hasRecentFiring(fireWindowMs) && currentRpmFloat >= minCrankForSync) {
+              engineState = ENGINE_RUNNING;
+              crankStartMs = 0;
+            } else if (now - crankStartMs > maxCrankMs) {
+              // Nessun segnale ECU entro il timeout: motore spento
+              engineState = ENGINE_OFF;
+              crankStartMs = 0;
+              currentRpmFloat = 0.0;
+            } else if (currentRpmFloat < 350.0) {
+              currentRpmFloat += 2.0;
+            } else {
+              currentRpmFloat = 350.0;
+            }
+          }
         }
         break;
         

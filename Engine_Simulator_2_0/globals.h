@@ -9,6 +9,12 @@
 #define FIXED_RPM 1
 #define LINEAR_SWEPT_RPM 2
 
+// --- MODALITA' DI SINCRONIZZAZIONE ALL'AVVIO ---
+enum SyncMode {
+  SYNC_PASSIVE = 0,  // avvio autonomo: dopo il cranking il motore passa a RUNNING
+  SYNC_ACTIVE  = 1   // avvio reale: RUNNING solo con iniezione+accensione dalla ECU
+};
+
 // --- STRUTTURE DATI CONDIVISE ---
 struct configTable {
   uint8_t version;
@@ -23,6 +29,7 @@ struct configTable {
   uint16_t compressionRPM;
   uint16_t compressionOffset;
   bool compressionDynamic;
+  uint8_t syncMode;
 } __attribute__ ((packed));
 
 struct status {
@@ -71,5 +78,10 @@ extern ignitionTiming ignitions[4];
 
 // --- UTILITA' CONNESSA AL SISTEMA ---
 extern uint8_t connectedClients; // numero di client wifi collegati alla dashboard
+
+// Timestamp (micros) dell'ultimo fronte rilevato dalle ISR iniettori/candele (timing.cpp).
+// Usati dalla logica di avvio SYNC_ACTIVE per capire se la ECU sta pilotando il motore.
+extern volatile uint32_t lastInjEventUs;
+extern volatile uint32_t lastIgnEventUs;
 
 #endif

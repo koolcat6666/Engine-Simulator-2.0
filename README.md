@@ -48,16 +48,33 @@ Speeduino outputs such as injectors, ignition/coils, fan, idle, VVT, boost, and 
 - USB serial interface: ArduStim protocol for configuring trigger wheel and crank pattern, as well as RPM mode from TunerStudio
 - Speeduino timing monitoring (Phase 2): input capture via ISR on 9 CD4050BE inputs (4 injectors + 4 coils + fan), measuring injector on-time, pulse frequency, duty cycle, ignition dwell and advance
 - WiFi AP + web dashboard (Phase 3): SSID `EngineSimulator2.0`, password `1234567890`, IP `192.168.254.1`, responsive dashboard at `/`, allows selecting one of 64 trigger patterns and persists the setting to NVS memory
+- Startup synchronization mode (Sync Mode): Passive (autonomous start) or Active (real ECU-driven start), selectable from the `/setup` page and persisted to NVS
+
+### Startup synchronization (Sync Mode)
+
+When the engine is started (physical Start/Stop button or `/api/start`), the simulator behaves
+according to the selected **Sync Mode**, configured on the `/setup` web page and stored in NVS
+(key `syncMode`):
+
+| Mode | Behavior |
+|:-----|:---------|
+| **Passive** (default) | Fully autonomous. Cranking ramps the RPM from 0 up to 350, then the engine transitions to RUNNING on its own. |
+| **Active** | Real ECU-driven start. The engine stays in CRANKING (RPM capped at 350) until the Speeduino actually fires: it transitions to RUNNING only when both injector **and** ignition activity are detected (within a 400 ms window) and RPM ≥ 250. If no valid firing is seen within **10 seconds**, cranking stops and the engine returns to OFF. |
+
+The firing detection reuses the Phase 2 input-capture ISRs: the injector/ignition ISRs update the
+event markers `lastInjEventUs` / `lastIgnEventUs`, exposed through the
+`hasRecentInjection/Ignition/Firing(windowMs)` helpers in `timing.cpp`. The active mode value is
+also reported in the `/api/data` JSON payload as `"syncMode":0|1`.
 
 ### Verification status
 
 | Module | Status |
 |:-------|:-------|
 | Phase 1 — Crank/Cam generation and engine model | Verified on hardware (Speeduino / Mega2560 reads engine speed correctly; fixed GPIO register usage `GPIO.out_w1ts/w1tc` in the ISR for core v3.3.x) |
-| Phase 2 — Injector/ignition timing (input capture) | Implemented and compiled successfully — hardware validation pending |
-| Phase 3 — WiFi AP + web dashboard | Implemented and compiled successfully — hardware validation pending |
+| Phase 2 — Injector/ignition timing (input capture) | Implemented and compiled successfully; drives the Sync Mode Active startup logic |
+| Phase 3 — WiFi AP + web dashboard | Verified on hardware (dashboard, `/setup` and Sync Mode Passive/Active tested) |
 
-Details and references: `firmware/WORKING_VERSION.md`.
+Details and references: `doc/WORKING_VERSION_EN.md`.
 
 ---
 
@@ -65,28 +82,29 @@ Details and references: `firmware/WORKING_VERSION.md`.
 
 ```
 Engine Simulator 2.0/
-||| firmware/                    # ESP32 source code
-|   ||| Engine_Simulator_2.0.ino # Main sketch (timer, simulation, state machine)
-|   ||| comms.cpp                # Serial command parser (ArduStim protocol)
-|   ||| comms.h                  # Comms header
-|   ||| globals.h                # Shared data structures
-|   ||| timing.cpp               # Input capture timing for injectors/ignition (Phase 2)
-|   ||| timing.h                 # Timing header
-|   ||| web.cpp                  # WiFi AP + dashboard + /setup + /api/data (Phase 3)
-|   ||| web.h                    # Web header
-|   ||| wheel_defs.h             # 63 trigger wheel definitions
-||| Engine_Simulator_2_0/        # Arduino IDE copy (folder name matches .ino project)
-||| Hardware/                    # PCB design (KiCad 10.0)
-|   ||| Engine Simulator 2.0/
-|       ||| *.kicad_sch          # Schematic
-|       ||| *.kicad_pcb          # PCB layout
-|       ||| *.kicad_pro          # KiCad project
-|       ||| BOM.md               # Bill of materials (updated from netlist)
-|       ||| Gerbers/             # Manufacturing files (Gerber + drill)
-||| doc/                         # Documentation
-|   ||| dupont_pinout.md         # Speeduino V0.4 40-pin IDC pinout
-|   ||| esp32u_pin_assignment.md # ESP32U pin mapping
-||| README.md                    # This file
+├── Engine_Simulator_2_0/         # ESP32 firmware (single source tree; folder name = sketch name)
+│   ├── Engine_Simulator_2_0.ino  # Main sketch (timer, simulation, state machine)
+│   ├── comms.cpp / comms.h       # Serial command parser (ArduStim protocol)
+│   ├── globals.h                 # Shared data structures (incl. SyncMode enum)
+│   ├── timing.cpp / timing.h     # Injector/ignition input capture (Phase 2)
+│   ├── web.cpp / web.h           # WiFi AP + dashboard + /setup + /api/data (Phase 3)
+│   └── wheel_defs.h              # 64 trigger wheel definitions
+├── Hardware/                     # PCB design (KiCad 10.0)
+│   └── Engine Simulator 2.0/
+│       ├── *.kicad_sch           # Schematic
+│       ├── *.kicad_pcb           # PCB layout
+│       ├── *.kicad_pro           # KiCad project
+│       ├── BOM.md                # Bill of materials (updated from netlist)
+│       └── Gerbers/              # Manufacturing files (Gerber + drill)
+├── doc/                          # Documentation (English + Italian)
+│   ├── ESP32U_PIN_ASSIGNMENT_EN.md / _IT.md
+│   ├── SPEEDUINO_V04_IDC40_PINOUT_EN.md / _IT.md
+│   ├── dupont_pinout_EN.md / _IT.md
+│   └── WORKING_VERSION_EN.md / _IT.md
+├── images/                       # README assets
+├── README.md                     # This file (English)
+├── README_IT.md                  # Italian README
+└── LICENSE                       # MIT
 ```
 
 ---
@@ -136,15 +154,15 @@ Engine Simulator 2.0/
 ```bash
 # Via Arduino CLI (first time: install the dashboard libraries as well)
 arduino-cli lib install "ESP Async WebServer" "Async TCP"
-arduino-cli compile --fqbn esp32:esp32:esp32 firmware/Engine_Simulator_2.0.ino
-arduino-cli upload --fqbn esp32:esp32:esp32 --port COMx firmware/Engine_Simulator_2.0.ino
+arduino-cli compile --fqbn esp32:esp32:esp32 "Engine_Simulator_2_0"
+arduino-cli upload --fqbn esp32:esp32:esp32 --port COMx "Engine_Simulator_2_0"
 ```
 
 ### Configuration
 
 The trigger wheel/crank pattern can be selected in the following ways:
 
-1. Dashboard web interface (recommended): connect to WiFi `EngineSimulator2.0` (password `1234567890`) and open `http://192.168.254.1` -> page `/setup` to select the pattern (persisted to NVS memory)
+1. Dashboard web interface (recommended): connect to WiFi `EngineSimulator2.0` (password `1234567890`) and open `http://192.168.254.1` -> page `/setup` to select the pattern and the **Sync Mode** (both persisted to NVS memory)
 2. USB serial (115200 baud): use command `X` to select the next pattern, or `S<n>` to select by index
 3. ArduStim GUI: desktop software connecting via serial to configure patterns and modes
 
